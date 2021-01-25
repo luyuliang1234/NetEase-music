@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
+		<link rel="stylesheet" type="text/css" href="./css/player.css">
+		<link  rel="stylesheet"  type="text/css"  href="./css/1.css">
+		<title>全部歌单-歌单-网易云音乐</title>
+		<style type="text/css">
+			body{
+					background-color: rgb(245,245,245);
+				}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.nav {
+				height: 70px;
+				background-color: #242424;
+				display: flex;
+				cursor: pointer;
+			}
+			.rem{
+				cursor: pointer;
+			}
+			
+			.nav>div {
+				height: 70px;
+			}
+			.text{
+				text-align: center;
+				line-height:70px;
+				overflow:hidden;
+				font-size: 17px;
+			}
+			.rem{
+				height: 37px;
+				background-color: rgb(194,12,12) ;
+				display: flex;
+			}
+			.rem>div{
+				height:37px;
+			}
+							
+			.zq-content{
+				height: 1200px;
+				width: 980px;
+				background-color: #fff;
+				margin: 0 auto;
+				border: 1px solid rgb(211,211,211);
+				display: flex;
+				justify-content: center;
+			}
+			.zq-content-left{
+				width: 731px;
+				height: 1200px;
+				border-right:1px solid rgb(211,211,211);
+			}
+			.zq-content-right{
+				width: 247px;
+				height: 1200px;
+			}
+			.zq-content-title{
+				width: 95%;
+				height: 45px;
+				margin: 0 auto;
+				border-bottom: 2px solid rgb(193,13,12);
+				display: flex;
+				/* y轴对齐 */
+				align-items: center;
+				justify-content: space-between;
+			}
+			.zq-content-title-left{
+				width: 151px;
+				height: 45px;
+				margin: 0 auto;
+				display: flex;
+				/* y轴对齐 */
+				justify-content: space-between;
+			}
+			.zq-content-title-left > div{
+				width: 30px;
+				height: 35px;
+			}
+			.zq-content-titlt-right{
+				width:46px;
+				height:29px;
+				margin:0 auto;
+			}
+			.zq-b{
+				border-style: none;
+				border-color: brown;
+				background-color:brown;
+				padding-left:5px;
+				padding-right:5px;
+				padding-top:2px;
+				padding-bottom:2px;
+			}
+			.zq-content-main{
+				width: 95%;
+				height: 400px;
+				margin: 0 auto;
+				/* 弹性布局 （盒子模型）使块级标签在同一行*/
+				display: flex;
+				/* x轴 */
+				justify-content: space-between;
+				/* 换行 */
+				flex-wrap: wrap;
+			}
+			.banner {
+				height: 286px;
+				display: flex;
+				justify-content: center;
+				background-color: black;
+			}
+					
+			.banner-left {
+				height: 286px;
+				width: 732px;
+			}
+	
+			.banner-right {
+				height: 286px;
+				width: 248px;
+			}
+	
+			.banner-left>img {
+				height: 100%;
+				width: 100%;
+			}
+	
+			.banner-right>img {
+				height: 100%;
+				width: 100%;
+			}
+	
+			.content {
+				height: 1425px;
+				width: 980px;
+				background-color: #fff;
+				margin: 0 auto;
+				border: 1px solid rgb(211, 211, 211);
+				display: flex;
+				justify-content: center;
+			}
+	
+			.content-left {
+				width: 731px;
+				height: 1425px;
+				border-right: 1px solid rgb(211, 211, 211);
+			}
+	
+			.content-right {
+				width: 247px;
+				height: 920px;
+			}
+	
+			.content-title {
+				width: 95%;
+				height: 45px;
+				margin: 0 auto;
+				border-bottom: 2px solid rgb(193, 13, 12);
+				display: flex;
+				/* y轴对齐 */
+				align-items: center;
+				justify-content: space-between;
+			}
+	
+			.content-main {
+				width: 95%;
+				height: 500px;
+				margin: 0 auto;
+				/* 弹性布局 （盒子模型）使块级标签在同一行*/
+				display: flex;
+				/* x轴 */
+				justify-content: space-between;
+				/* 换行 */
+				flex-wrap: wrap;
+			}
+	
+			.content-main>div {
+				width: 145px;
+				height: 185px;
+				margin-top: 20px;
+			}
+
+			.imgcss{
+				width: 100%;
+				height: 85%;
+			}
+			
+			.content-mainII {
+				width: 95%;
+				height: 250px;
+				margin: 0 auto;
+				/* 弹性布局 （盒子模型）使块级标签在同一行*/
+				display: flex;
+				/* x轴 */
+				justify-content: space-between;
+				/* 换行 */
+				flex-wrap: wrap;
+			}
+					
+			.newdisk {
+				position: relative;
+				top: 10px;
+				border: 2px solid rgb(211, 211, 211);
+				background-color: rgb(211, 211, 211);
+				height: 85%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+	
+			.newdisk>div {
+				height: 110px;
+				width: 110px;
+			}
+	
+			.imgcss1 {
+				height: 100%;
+				width: 100%;
+			}
+	
+			.content-mainIII {
+				width: 689px;
+				height: 527px;
+				margin: 0 auto;
+				/* 弹性布局 （盒子模型）使块级标签在同一行*/
+				display: flex;
+				/* x轴 */
+				justify-content: space-between;
+				/* 换行 */
+				flex-wrap: wrap;
+			}
+	
+			.榜单 {
+				position: relative;
+				top: 10px;
+				border: 2px solid rgb(211, 211, 211);
+				background-color: rgb(244, 244, 244);
+				height: 472px;
+				width: 689px;
+				display: flex;
+				margin-top: 20px;
+				background: url(https://s2.music.126.net/style/web2/img/index/index_bill.png?13302d5e94d2f8585862892e20d4b219) no-repeat;
+	
+			}
+	
+			.bang {
+				height: 100%;
+				width: 33.3333333%;
+				border: 1px solid rgb(211, 211, 211);
+				display: flex;
+			}
+			p,h3{
+				cursor: pointer;
+			}
+			dl{
+				display: block;
+			}
+			.top{
+				height: 100px;
+				padding: 20px 0 0 19px;
+				display: flex;
+			}
+			.j-img{
+				height: 80px;
+				width: 80px;
+			}
+			a{
+				
+				cursor: pointer;
+				text-decoration: none;
+				color: #333;
+			}
+			
+			a : hover{
+				text-decoration: underline;
+			}
+			
+			a : hover{
+				text-decoration: underline;
+			}
+			
+			.btn{
+				margin-top: 10px;
+			}
+			.tit{
+				float: left;
+				width: 116px;
+				margin: 6px 0 0 10px;
+			}
+			.f-fs1{
+				font-size: 14px;
+			}
+			.s-bg{
+				font-size: 12px;
+			}
+			li{
+				list-style: none;
+				height: 32px;
+			}
+			ol{
+				height: 319px;
+				margin-left: 50px;
+				line-height: 32px;
+			}
+			.榜单 .no-top{
+				color: #BA2226;
+			}
+			ol .no{
+				float: left;
+				position: relative;
+				width: 35px;
+				height: 32px;
+				margin-left: -35px;
+				text-align: center;
+				color: #666;
+				font-size: 16px;
+			}
+			.nm {
+				float: left;
+				width: 170px;
+				height: 32px;
+				font-size: 12px;
+			}
+			.top-2{
+				padding-left: 25px;
+			}
+			.top-3{
+				padding-left: 24px;
+			}
+			.v-hd3 {
+				position: relative;
+				height: 23px;
+				margin: 0 20px;
+				border-bottom: 1px solid #ccc;
+				color: #333;
+				font-weight: bold;
+			}
+			.f-fl{
+				font-size: 10px;
+			}
+			.s-fc3{
+				font-size: 12px;
+				color: rgb(102,102,102);
+				padding-left: 70px;
+			}
+			.itm {
+				display: flex;
+				float: left;
+				width: 210px;
+				height: 62px;
+				background: #fafafa;
+				margin: 15px 0 0 20px ;
+			}
+			.head .j-img{
+				float: left;
+				width: 62px;
+				height: 62px;
+			}
+			.ifo h4{
+				padding-left: 10px;
+				margin-top: 8px;
+			}
+			.ifo p{
+				padding-left: 10px;
+				width: 100%;
+			}
+			.n-singer{
+				height: 455px;
+				width: 247px;
+			}
+			.zb{
+				height: 294px;
+				width: 247px;
+			}
+			.f-cb{
+				width: 230px;
+				height: 250px;
+			}
+			.zb-h3{
+				font-size: 12px;
+			}
+			.cver1{
+				width: 40px;
+				height: 42.6px;
+			}
+			.cver1 .i-img{
+				width: 40px;
+				height: 40px;
+			}
+			.f-cb li{
+				display: flex;
+				margin: 20px 0 0 20px;
+				height: 50px;
+				width: 210px;
+			}
+			.zb-xm{
+				padding-top: 5px;
+				font-size: 10px;
+				padding-left: 10px;
+			}
+			.zb-jj{
+				padding-top: 4px;
+				font-size: 10px;
+				padding-left: 10px;
+				color: rgb(102,102,102);
+			}
+			
+			.m-srch .srch{
+				padding-left: 10px;
+				height: 32px;
+				width: 158px;
+				margin-top: 19px;
+				background-color: #fff;
+				border-radius: 32px;
+			}
+			.m-srch{
+				float: right;
+				width: 158px;
+				height: 32px;
+			}
+			.srch-in{
+				margin: 8px 0 0 0;
+				height: 16px;
+				width: 121.6px;
+				outline:medium;
+				border: 1px;
+			}
+			.srch-in:focus{
+				border:0px solid red;
+			}
+			input{
+				line-height: 16px;
+			}
+			.s-img{
+				padding-top: 5px;
+				height: 22px;
+				width: 23px;
+			}
+			.srch-span{
+				display: flex;
+			}
+			.chuang{
+				color: rgb(204,204,204);
+				font-size: 12px;
+				float: right;
+				width: 90px;
+				height: 32px;
+				margin: 19px 0 0 18px;
+				box-sizing: border-box;
+				padding-left: 16px;
+				border: 1px solid #4F4F4F;
+				background-position: 0 -140px;
+				line-height: 33px;
+				color: #ccc;
+				border-radius: 20px;
+			}
+			.login{
+				margin: 27px 0 0 12px;
+				color: rgb(204,204,204);
+				font-size: 13px;
+			}
+			.newdisk{
+				background-color: rgb(245,245,245);
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var input = document.getElementById("srch-input");
+				input.onchange = function(){
+					console.log(input.value)
+					var input_c = input.value
+					var url = "https://music.163.com/#/search/m/?s="+input_c+"&type=1";
+					window.location.href = url;
+				}
+			}
+			function changeColorO(c){
+				c.style.border = '1px solid rgb(255,255,255)'
+				c.style.color = 'rgb(255,255,255)'	
+			}
+			function changeColorB(c){
+				c.style.border = '1px solid #4F4F4F'
+				c.style.color = 'rgb(204,204,204)'
+			}
+		</script>
+
+		
+		
+	</head>
+	<body>
+		<div class="nav">
+				<div class="首页" onclick="window.location.href= 'index.html';return false" style="width: 25%;"><img
+						style="height: 70px;width: 100%;" src="img/网易.jpg"></div>
+				<div class="text" onclick="window.location.href= 'index.html';return false" style="color:white;width:10%">发现音乐
+				</div>
+				<div class="text" onclick="window.location.href= '我的音乐.html';return false" style="color:white;width:10%">我的音乐
+				</div>
+				<div class="text" onclick="window.location.href= '朋友.html';return false" style="color:white;width:6%">朋友</div>
+				<div class="text" onclick="window.open('https://music.163.com/store/product')" style="color:white;width:6%">商城
+				</div>
+				<div class="text" onclick="window.open('https://music.163.com/st/musician')" style="color:white;width:9%">音乐人
+				</div>
+				<div class="text" onclick="window.open('下载.html')" style="color:white;width:7%">下载客户端</div>
+				<div class="m-srch">
+					<div class="srch" >
+						<span class="srch-span">
+							<img class="s-img" src="img/搜索.png"  />
+							<input type="text"  class="srch-in" id="srch-input"  placeholder="音乐/视频/电台/用户" />
+						</span>
+					</div>
+				</div>
+				<a onmousemove="changeColorO(this)" onmouseleave="changeColorB(this)" class="chuang" href="https://music.163.com/login?targetUrl=%2Fcreatorcenter">创作者中心</a>
+				<a class="login" href="https://music.163.com/#/login">登录</a>
+			</div>
+			<div class="rem">
+				<div onclick="window.location.href= 'index.html';return false"
+					style="font-size: 10px;width: 30%;line-height:37px;overflow:hidden;text-align: right;color: white;">推荐
+				</div>
+				<div onclick="window.open('排行榜.html','_self')"
+					style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">排行榜
+				</div>
+				<div onclick="window.open('歌单.html','_self')"
+					style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌单
+				</div>
+				<div onclick="window.open('主播电台.html','_self')"
+					style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">主播电台
+				</div>
+				<div onclick="window.open('歌手.html','_self')"
+					style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌手
+				</div>
+				<div onclick="window.open('新碟上架.html','_self')"
+					style="font-size: 10px;width: 37%;line-height:37px;overflow:hidden;text-align: left;color: white;">新歌上架
+				</div>
+			</div>
+		
+		<div class="zq-content">
+			<div class="zq-content-left">
+				<div class="zq-content-title">
+					<div clss="zq-content-title-left">
+						<div>
+							<h3 style="font-size: 25px;">全部
+							<span>
+								<select  style="color:royalblue;font-size: 17px;">
+									<option>选择分类</option>
+									<option>语种</option>
+									<option>风格</option>
+									<option>场景</option>
+									<option>情感</option>
+									<option>主题</option>
+								</select>
+							</span></h3>
+							
+						</div>
+						
+					</div>
+					
+					<div class="zq-content-title-right">
+						<div class="zq-b">
+							<a href="https://music.163.com/#/discover/playlist/?order=hot" style="font-size: 17px;color: whitesmoke">热门</a>
+						</div>	
+					</div>
+				</div>
+				<br><br>
+				<div class="zq-content-main">
+					
+					<div>
+						<a title="梦想无处安放的日子 也要时常拿出来晾晒" href="https://music.163.com/#/playlist?id=5384248621"><img class="imgcss" src="img/6.png" /></a>
+						<p><a href="https://music.163.com/#/playlist?id=5384248621"><span style="font-size: 15px;">梦想无处安放的日子</span></a></p>
+					</div>
+					
+					<div>
+						<a title="一场灵性的觉醒之旅" href="https://music.163.com/#/playlist?id=2626399710"><img class="imgcss" src="img/7.png" /></a>
+						<p><a href="https://music.163.com/#/playlist?id=2626399710"><span style="font-size: 15px;">一场灵性的觉醒之旅</span></a></p>
+					</div>
+					<div>
+						<a title="用人类幼崽的可爱来治愈打工人" href="https://music.163.com/#/playlist?id=5384773827"><img class="imgcss" src="img/8.png" /></a>
+						<p><a href="https://music.163.com/#/playlist?id=5384773827"><span style="font-size: 15px;">人类幼崽的可爱</span></a></p>
+					</div>
+					<div>
+						<a title="治愈说唱|越过黑暗的那道光" href="https://music.163.com/#/playlist?id=5384130544"><img class="imgcss" src="img/9.png" /></a>
+						<p><a href="https://music.163.com/#/playlist?id=5384130544"><span style="font-size: 15px;">越过黑暗的那道光</span></a></p>
+					</div>
+					<div>
+						<a title="《姐姐的爱乐之程》云南站路演" href="https://music.163.com/#/playlist?id=5385481039"><img class="imgcss" src="img/1.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5385481039"><span style="font-size: 15px;">《姐姐的爱乐之程》</span></a></p>
+					</div>
+					<div>
+						<a title="苏6 哪吒 小条 防 扎 尧 英雄会 抖腿" href="https://music.163.com/#/playlist?id=5129394655"><img class="imgcss" src="img/2.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5129394655"><span style="font-size: 15px;">苏6 哪吒 英雄会 抖腿</span></a></p>
+					</div>
+					<div>
+						<a title="『偏愛亦是救赎』" href="https://music.163.com/#/playlist?id=5326093269"><img class="imgcss" src="img/3.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5326093269"><span style="font-size: 15px;">『偏愛亦是救赎』</span></a></p>
+					</div>
+					<div>
+						<a title="[欧美私人订制] 最懂你的欧美推荐" href="https://music.163.com/#/playlist?id=2829816518"><img class="imgcss" src="img/4.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=2829816518"><span style="font-size: 15px;">[欧美私人订制]</span></a></p>
+					</div>
+					<div>
+						<a title="东方流韶：倾听民乐精选集" href="https://music.163.com/#/playlist?id=5218934316"><img class="imgcss" src="img/13.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5218934316"><span style="font-size: 15px;">东方流韶：倾听民乐</span></a></p>
+					</div>
+					<div>
+						<a title="『纯音』你会因为一个梦而喜欢上一个人吗" href="https://music.163.com/#/playlist?id=5361959265"><img class="imgcss" src="img/10.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5361959265"><span style="font-size: 15px;">因梦喜欢上一个人</span></a></p>
+					</div>
+					<div>
+						<a title="纯音林涧丨自然 · 音乐" href="https://music.163.com/#/playlist?id=5233498915"><img class="imgcss" src="img/11.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5233498915"><span style="font-size: 15px;">纯音林涧自然·音乐</span></a></p>
+					</div>
+					<div>
+						<a title="没Bose不配炸耳机的Subwoofer" href="https://music.163.com/#/playlist?id=5210003505"><img class="imgcss" src="img/12.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5210003505"><span style="font-size: 15px;">Subwoofer</span></a></p>
+					</div>
+					<div>
+						<a title="开头就炸适合喜欢直接炸上来就high的朋友" href="https://music.163.com/#/playlist?id=5259513986"><img class="imgcss" src="img/14.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5259513986"><span style="font-size: 15px;">开头就燃爆的声音</span></a></p>
+					</div>
+					<div>
+						<a title="「纯音乐」温馨美好，涤荡心扉的旋律" href="https://music.163.com/#/playlist?id=5277313696"><img class="imgcss" src="img/15.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5277313696"><span style="font-size: 15px;">涤荡心扉的旋律</span></a></p>
+					</div>
+					<div>
+						<a title="欧美民谣丨散文诗般的情绪荡漾我心" href="https://music.163.com/#/playlist?id=5173689994"><img class="imgcss" src="img/16.png"></a>
+						<p><a href="https://music.163.com/#/playlist?id=5173689994"><span style="font-size: 15px;">散文诗般的情绪</span></a></p>
+					</div>
+					<div class="u-page">
+						<br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="javascript:void(0)" class="zbtn zprv js-disabled">上一页</a>
+					<a href="javascript:void(0)" class="zpgi js-selected">1</a>
+					<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=35" class="zpgi">2</a>
+					<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=70" class="zpgi">3</a>
+					<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=105" class="zpgi">4</a>
+					<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=140" class="zpgi">5</a>
+					<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=175" class="zpgi">6</a>
+					<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=210" class="zpgi">7</a>
+					<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=245" class="zpgi">8</a>
+					<span class="zdot">...</span>
+					<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=1295" class="zpgi">38</a>
+					<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=35" class="zbtn znxt">下一页</a>
+					</div>
+					<div class="zq-content-main"></div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+			<div class="footer">
+			        <div class="inner">
+			            <img src="img/syg.bmp" alt="" id="change" style="height: 32px;">
+			            <img src="img/bf.bmp" alt="" style="margin-left: 20px; height: 40px; width: 35px;" id="playmusic">
+			            <img src="img/xyg.bmp" alt="" id="change2" style="margin-left: 20px;height: 32px;">
+			            <img src="http://p3.music.126.net/ZYgsZKTn5dclbcDVrLnxdw==/109951164442715619.jpg" alt="" id="pic" style="height: 40px; width: 40px; border-radius: 10%; margin-left: 30px;">
+			            <div class="play">
+			                <div class="word">
+								<br>
+			                    <p id="word1">多情种 - 要不要买菜</p>
+			                </div>
+			                <div>
+			                    <audio src="http://music.163.com/song/media/outer/url?id=1398508295" controls="controls" class="player" id="audio"></audio>
+			                </div>
+			            </div>
+			            <label style="color:white; margin-left: 50px;">
+			                <h3><input type="checkbox" class="loop" id="loop" οnclick="loop(this)">循环播放</h3>
+			            </label>
+			
+			        </div>
+			    </div>
+			
+		<div style="width:1897px height:181px">
+			<br><br><br><br><br><br><br>
+			<br><br><br><br><br><br>
+		</div>
+		
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script>
+		
+		    var audio = document.getElementById("audio");
+		    var pic = document.getElementById("pic");
+		    var word = document.getElementById("word1");
+		    var change = document.getElementById("change");
+		    var change2 = document.getElementById("change2");
+		    var playmusic = document.getElementById("playmusic");
+		    var loop = document.getElementById("loop");
+		    playmusic.onclick = function () {
+		        var tmp = playmusic.src;
+		        if (tmp.indexOf("zt.bmp") >= 0) {
+		            // 正在播放
+		            audio.pause();
+		            playmusic.src = "./img/bf.bmp";
+		        } else {
+		            // 暂停状态
+		            audio.play();
+		            playmusic.src = "./img/zt.bmp";
+		        }
+		    }
+		
+		    function getsong() {
+		
+		        $.ajax({
+		            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+		            type: "GET",
+		            dataType: "json",
+		            success: function (data) {
+		                console.log(data);
+		                pic.src = data.data.picurl;
+		                audio.src = data.data.url;
+		                word.innerText = data.data.name + " - " + data.data.artistsname;
+		                audio.load();
+		
+		            }
+		        })
+		
+		    }
+		    getsong();
+		    change.onclick = function () {
+		        playmusic.src = "./img/zt.bmp";
+		        $.ajax({
+		            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+		            type: "GET",
+		            dataType: "json",
+		            success: function (data) {
+		                console.log(data);
+		                pic.src = data.data.picurl;
+		                audio.src = data.data.url;
+		                word.innerText = data.data.name + " - " + data.data.artistsname;
+		                audio.load();
+		                audio.play();
+		            }
+		        })
+		    }
+		    change2.onclick = function () {
+		        playmusic.src = "./img/zt.bmp";
+		        $.ajax({
+		            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+		            type: "GET",
+		            dataType: "json",
+		            success: function (data) {
+		                console.log(data);
+		                pic.src = data.data.picurl;
+		                audio.src = data.data.url;
+		                word.innerText = data.data.name + " - " + data.data.artistsname;
+		
+		                audio.load();
+		                audio.play();
+		            }
+		        })
+		    }
+		    loop.onclick = function () {
+		
+		        if (loop.checked == true) {
+		
+		            audio.loop = true;
+		
+		        } else {
+		
+		            audio.loop = false;
+		
+		        }
+		
+		    }
+		
+		</script>
+		<img  style="height:150px" class="imgcss" src="img/版权.png" />
+	</body>
+</html>
+

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+	<link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
+	<link rel="stylesheet" type="text/css" href="./css/player.css">
+	<head>
+		<meta charset="utf-8">
+			<title></title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav {
+			height: 70px;
+			background-color: #242424;
+			display: flex;
+		}
+
+		.nav>div {
+			height: 70px;
+		}
+
+		.text {
+			text-align: center;
+			line-height: 70px;
+			overflow: hidden;
+		}
+
+		.rem {
+			height: 37px;
+			background-color: rgb(194, 12, 12);
+			display: flex;
+		}
+
+		.rem>div {
+			height: 37px;
+		}
+
+		.lf {
+			display: flex;
+
+		}
+		
+		.m-srch .srch{
+					padding-left: 10px;
+					height: 32px;
+					width: 158px;
+					margin-top: 19px;
+					background-color: #fff;
+					border-radius: 32px;
+				}
+				.m-srch{
+					float: right;
+					width: 158px;
+					height: 32px;
+				}
+				.srch-in{
+					margin: 8px 0 0 0;
+					height: 16px;
+					width: 121.6px;
+					outline:medium;
+					border: 1px;
+				}
+				.srch-in:focus{
+					border:0px solid red;
+				}
+				.s-img{
+					padding-top: 5px;
+					height: 22px;
+					width: 23px;
+				}
+				.srch-span{
+					display: flex;
+				}
+				.chuang{
+					color: rgb(204,204,204);
+					font-size: 12px;
+					float: right;
+					width: 90px;
+					height: 32px;
+					margin: 19px 0 0 18px;
+					box-sizing: border-box;
+					padding-left: 16px;
+					border: 1px solid #4F4F4F;
+					background-position: 0 -140px;
+					line-height: 33px;
+					color: #ccc;
+					border-radius: 20px;
+				}
+				.login{
+					margin: 27px 0 0 12px;
+					color: rgb(204,204,204);
+					font-size: 13px;
+				}
+				.newdisk{
+					background-color: rgb(245,245,245);
+				}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var input = document.getElementById("srch-input");
+			input.onchange = function(){
+				console.log(input.value)
+				var input_c = input.value
+				var url = "https://music.163.com/#/search/m/?s="+input_c+"&type=1";
+				window.location.href = url;
+			}
+		}
+		function changeColorO(c){
+			c.style.border = '1px solid rgb(255,255,255)'
+			c.style.color = 'rgb(255,255,255)'	
+		}
+		function changeColorB(c){
+			c.style.border = '1px solid #4F4F4F'
+			c.style.color = 'rgb(204,204,204)'
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="./css/1.css">
+</head>
+
+<body>
+	<div class="nav">
+		<div class="首页" onclick="window.location.href= 'index.html';return false" style="width: 25%;"><img
+				style="height: 70px;width: 100%;" src="img/网易.jpg"></div>
+		<div class="text" onclick="window.location.href= 'index.html';return false" style="color:white;width:10%">发现音乐
+		</div>
+		<div class="text" onclick="window.location.href= '我的音乐.html';return false" style="color:white;width:10%">我的音乐
+		</div>
+		<div class="text" onclick="window.location.href= '朋友.html';return false" style="color:white;width:6%">朋友</div>
+		<div class="text" onclick="window.open('https://music.163.com/store/product')" style="color:white;width:6%">商城
+		</div>
+		<div class="text" onclick="window.open('https://music.163.com/st/musician')" style="color:white;width:9%">音乐人
+		</div>
+		<div class="text" onclick="window.open('下载.html')" style="color:white;width:7%">下载客户端</div>
+		<div class="m-srch">
+			<div class="srch" >
+				<span class="srch-span">
+					<img class="s-img" src="img/搜索.png"  />
+					<input type="text"  class="srch-in" id="srch-input"  placeholder="音乐/视频/电台/用户" />
+				</span>
+			</div>
+		</div>
+		<a onmousemove="changeColorO(this)" onmouseleave="changeColorB(this)" class="chuang" href="https://music.163.com/login?targetUrl=%2Fcreatorcenter">创作者中心</a>
+		<a class="login" href="https://music.163.com/#/login">登录</a>
+	</div>
+	<div class="rem">
+		<div onclick="window.location.href= 'index.html';return false"
+			style="font-size: 10px;width: 30%;line-height:37px;overflow:hidden;text-align: right;color: white;">推荐
+		</div>
+		<div onclick="window.open('排行榜.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">排行榜
+		</div>
+		<div onclick="window.open('歌单.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌单
+		</div>
+		<div onclick="window.open('主播电台.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">主播电台
+		</div>
+		<div onclick="window.open('歌手.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌手
+		</div>
+		<div onclick="window.open('新碟上架.html','_self')"
+			style="font-size: 10px;width: 37%;line-height:37px;overflow:hidden;text-align: left;color: white;">新歌上架
+		</div>
+	</div>
+
+	<div id="toplist" class="g-bd3 g-bd3-1 f-cb">
+		<div class="g-sd3 g-sd3-1">
+			<div class="n-minelst n-minelst-2">
+				<h2 class="f-ff1">云音乐特色榜</h2>
+				<ul class="f-cb">
+					<li data-res-id="19723756" data-res-action="href" class="mine z-selected">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=19723756">
+									<img src="http://p2.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=40y40"
+										alt="云音乐飙升榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=19723756"
+									class="s-fc0">云音乐飙升榜</a></p>
+							<p class="s-fc4">每天更新</p>
+						</div>
+					</li>
+					<li data-res-id="3779629" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=3779629">
+									<img src="http://p2.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=40y40"
+										alt="云音乐新歌榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=3779629"
+									class="s-fc0">云音乐新歌榜</a></p>
+							<p class="s-fc4">每天更新</p>
+						</div>
+					</li>
+					<li data-res-id="2884035" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=2884035">
+									<img src="http://p2.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=40y40"
+										alt="网易原创歌曲榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=2884035"
+									class="s-fc0">网易原创歌曲榜</a></p>
+							<p class="s-fc4">每周四更新</p>
+						</div>
+					</li>
+					<li data-res-id="3778678" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=3778678">
+									<img src="http://p2.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg?param=40y40"
+										alt="云音乐热歌榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=3778678"
+									class="s-fc0">云音乐热歌榜</a></p>
+							<p class="s-fc4">每周四更新</p>
+						</div>
+					</li>
+				</ul>
+				<h2 class="scd f-ff1">全球媒体榜</h2>
+				<ul class="f-cb">
+					<li data-res-id="5213356842" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=5213356842">
+									<img src="http://p2.music.126.net/uPVbd5SJXdQaIMnknGb3Ng==/109951165493946071.jpg?param=40y40"
+										alt="新说唱热歌榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=5213356842"
+									class="s-fc0">新说唱热歌榜</a></p>
+							<p class="s-fc4">每周一更新</p>
+						</div>
+					</li>
+					<li data-res-id="991319590" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=991319590">
+									<img src="http://p2.music.126.net/y8zyTt4HwXbJqB31aQKz1A==/109951164353220919.jpg?param=40y40"
+										alt="云音乐说唱榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=991319590"
+									class="s-fc0">云音乐说唱榜</a></p>
+							<p class="s-fc4">每周五更新</p>
+						</div>
+					</li>
+					<li data-res-id="71384707" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=71384707">
+									<img src="http://p2.music.126.net/BzSxoj6O1LQPlFceDn-LKw==/18681802069355169.jpg?param=40y40"
+										alt="云音乐古典音乐榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=71384707"
+									class="s-fc0">云音乐古典音乐榜</a></p>
+							<p class="s-fc4">每周四更新</p>
+						</div>
+					</li>
+					<li data-res-id="1978921795" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=1978921795">
+									<img src="http://p2.music.126.net/5tgOCD4jiPKBGt7znJl-2g==/18822539557941307.jpg?param=40y40"
+										alt="云音乐电音榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=1978921795"
+									class="s-fc0">云音乐电音榜</a></p>
+							<p class="s-fc4">每周五更新</p>
+						</div>
+					</li>
+					<li data-res-id="2250011882" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=2250011882">
+									<img src="http://p2.music.126.net/oUxnXXvM33OUHxxukYnUjQ==/109951164174523461.jpg?param=40y40"
+										alt="抖音排行榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=2250011882"
+									class="s-fc0">抖音排行榜</a></p>
+							<p class="s-fc4">每周五更新</p>
+						</div>
+					</li>
+					<li data-res-id="71385702" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=71385702">
+									<img src="http://p1.music.126.net/vttjtRjL75Q4DEnjRsO8-A==/18752170813539664.jpg?param=40y40"
+										alt="云音乐ACG音乐榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=71385702"
+									class="s-fc0">云音乐ACG音乐榜</a></p>
+							<p class="s-fc4">每周四更新</p>
+						</div>
+					</li>
+					<li data-res-id="745956260" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=745956260">
+									<img src="http://p1.music.126.net/vs-cMh49e6qPEorHuhU07A==/18737877162497499.jpg?param=40y40"
+										alt="云音乐韩语榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=745956260"
+									class="s-fc0">云音乐韩语榜</a></p>
+							<p class="s-fc4">每周四更新</p>
+						</div>
+					</li>
+					<li data-res-id="10520166" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=10520166">
+									<img src="http://p1.music.126.net/8-GBrukQ3BHhs4CmK6qE4w==/109951163424197392.jpg?param=40y40"
+										alt="云音乐国电榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=10520166"
+									class="s-fc0">云音乐国电榜</a></p>
+							<p class="s-fc4">每周五更新</p>
+						</div>
+					</li>
+					<li data-res-id="2023401535" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=2023401535">
+									<img src="http://p1.music.126.net/0_6_Efe9m0D0NtghOxinUg==/109951163089272193.jpg?param=40y40"
+										alt="英国Q杂志中文版周榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=2023401535"
+									class="s-fc0">英国Q杂志中文版周榜</a></p>
+							<p class="s-fc4">每周三更新</p>
+						</div>
+					</li>
+					<li data-res-id="180106" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=180106">
+									<img src="http://p1.music.126.net/VQOMRRix9_omZbg4t-pVpw==/18930291695438269.jpg?param=40y40"
+										alt="UK排行榜周榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=180106"
+									class="s-fc0">UK排行榜周榜</a></p>
+							<p class="s-fc4">每周一更新</p>
+						</div>
+					</li>
+					<li data-res-id="60198" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=60198">
+									<img src="http://p1.music.126.net/EBRqPmY8k8qyVHyF8AyjdQ==/18641120139148117.jpg?param=40y40"
+										alt="美国Billboard周榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=60198"
+									class="s-fc0">美国Billboard周榜</a></p>
+							<p class="s-fc4">每周四更新</p>
+						</div>
+					</li>
+					<li data-res-id="3812895" data-res-action="href" class="mine ">
+						<div class="item f-cb">
+							<div class="left">
+								<a class="avatar" href="https://music.163.com/discover/toplist?id=3812895">
+									<img src="http://p1.music.126.net/A61n94BjWAb-ql4xpwpYcg==/18613632348448741.jpg?param=40y40"
+										alt="Beatport全球电子舞曲榜">
+									<span class="msk"></span>
+								</a>
+							</div>
+							<p class="name"><a href="https://music.163.com/discover/toplist?id=3812895"
+									class="s-fc0">Beatport全球电子舞曲榜</a></p>
+							<p class="s-fc4">每周三更新</p>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		
+		<div class="g-mn3">
+			
+			<div class="g-mn3c">
+				
+				<div class="g-wrap">
+					<div class="m-info m-info-rank f-cb">
+						<div class="cover u-cover u-cover-rank"><img
+								src="http://p2.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=150y150"><span
+								class="msk"></span></div>
+						<div class="cnt">
+							<div class="cntc m-info">
+								<div class="hd f-cb">
+									<h2 class="f-ff2">云音乐飙升榜</h2>
+								</div>
+			
+								<div class="user f-cb">
+									<i class="u-icn u-icn-57"></i><span class="sep s-fc3">最近更新：12月20日</span> <span
+										class="s-fc4">（每天更新）</span>
+								</div>
+								<div class="btns f-cb">
+									<a href="javascript:;" class="u-btn2 u-btn2-2 u-btni-addply f-fl" hidefocus="true"
+										title="播放" data-res-type="13" data-res-id="19723756" data-res-action="play"
+										data-res-from="31" data-res-data="19723756"><i><em class="ply"></em>播放</i></a>
+									<a href="javascript:;" class="u-btni u-btni-add" hidefocus="true" title="添加到播放列表"
+										data-res-type="13" data-res-id="19723756" data-res-action="addto"
+										data-res-from="31" data-res-data="19723756"></a>
+									<a id="toplist-fav" data-res-id="19723756" data-res-type="13" data-res-action="fav"
+										data-res-data="3576553" class="u-btni u-btni-fav"
+										href="javascript:;"><i>(3576553)</i></a>
+									<a id="toplist-share" data-res-id="19723756" data-res-type="13"
+										data-res-action="share" data-res-name="云音乐飙升榜" data-res-author="网易云音乐"
+										data-res-data="http://p2.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg"
+										class="u-btni u-btni-share" href="javascript:;"><i>(9577)</i></a>
+									<a data-res-id="19723756" data-res-type="13" data-res-action="download"
+										class="u-btni u-btni-dl" href="javascript:;"><i>下载</i></a>
+									<a data-res-id="19723756" data-res-action="comment" href="javascript:;"
+										class="u-btni u-btni-cmmt j-cmt"><i>(<span
+												id="comment-count">199973</span>)</i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+					<div class="g-wrap12">
+						
+						<div id="song-list-pre-cache" data-key="song_toplist-19723756" data-simple="0" data-pvnamed="0">
+							<div oncopy="return false;" oncut="return false;" ondragstart="return false;"
+								id="auto-id-abT81z9qzCmE8Ucg">
+								
+				<div class="u-title u-title-1 f-cb">
+					<h3><span class="f-ff2">歌曲列表</span></h3><span class="sub s-fc3"><span>10</span>首歌</span>
+					<div class="more s-fc3">播放：<strong class="s-fc6" id="play-count">3829473280</strong>次</div>
+				</div>
+								<div class="j-flag" id="auto-id-FWZRzda8GvSqiMxw">
+									<table class="m-table m-table-rank">
+										<thead>
+											<tr>
+												<th class="first w1"></th>
+												<th>
+													<div class="wp">标题</div>
+												</th>
+												<th class="w2-1">
+													<div class="wp">时长</div>
+												</th>
+												<th class="w3-1">
+													<div class="wp">歌手</div>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr id="18061278601608646713496" class="even ">
+												<td>
+													<div class="hd"><span class="num">1</span>
+														<div class="rk "><span class="u-icn u-icn-75"></span></div>
+													</div>
+												</td>
+												<td class="rank">
+													<div class="f-cb">
+														<div class="tt"><a href="/song?id=1806127860"><img class="rpic"
+																	src="http://p3.music.126.net/so0K1mvpfm-2Og4OqW5Aww==/109951165557605439.jpg?param=50y50&amp;quality=100"></a><span
+																data-res-id="1806127860" data-res-type="18"
+																data-res-action="play" class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1806127860"><b
+																			title="Afterglow">Aft<div class="soil">WLH
+																			</div>erglow</b></a><span
+																		data-res-id="1806127860" data-res-action="mv"
+																		title="播放mv" class="mv">MV</span></span></div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">03:05</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1806127860"
+															data-res-action="addto"></a><span data-res-id="1806127860"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1806127860"
+															data-res-type="18" data-res-action="share"
+															data-res-name="Afterglow" data-res-author="Ed Sheeran"
+															data-res-pic="http://p3.music.126.net/so0K1mvpfm-2Og4OqW5Aww==/109951165557605439.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1806127860" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="Ed Sheeran"><span title="Ed Sheeran"><a
+														class="" href="/artist?id=33184" hidefocus="true">Ed&nbsp;Sheeran</a></span>
+											</div>
+												</td>
+											</tr>
+											<tr id="18053134841608646713496" class=" ">
+												<td>
+													<div class="hd"><span class="num">2</span>
+														<div class="rk "><span class="u-icn u-icn-75"></span></div>
+													</div>
+												</td>
+												<td class="rank">
+													<div class="f-cb">
+														<div class="tt"><a href="/song?id=1805313484"><img class="rpic"
+																	src="http://p3.music.126.net/MdcncXklCdAK1hd-gvP9TA==/109951165549423863.jpg?param=50y50&amp;quality=100"></a><span
+																data-res-id="1805313484" data-res-type="18"
+																data-res-action="play" class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1805313484"><b
+																			title="未来，请你来！">未来，<div class="soil">史</div>
+																			请你来！</b></a></span></div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">04:18</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1805313484"
+															data-res-action="addto"></a><span data-res-id="1805313484"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1805313484"
+															data-res-type="18" data-res-action="share"
+															data-res-name="未来，请你来！" data-res-author="易烊千玺"
+															data-res-pic="http://p3.music.126.net/MdcncXklCdAK1hd-gvP9TA==/109951165549423863.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1805313484" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="易烊千玺"><span title="易烊千玺"><a class=""
+																href="/artist?id=939088" hidefocus="true">易烊千玺</a></span></div>
+												</td>
+											</tr>
+											<tr id="18058422611608646713496" class="even ">
+												<td>
+													<div class="hd"><span class="num">3</span>
+														
+													</div>
+												</td>
+												<td class="rank">
+													<div class="f-cb">
+														<div class="tt"><a href="/song?id=1805842261"><img class="rpic"
+																	src="http://p3.music.126.net/YEkGgqCanqQ3cR1FAevJfw==/109951165554530175.jpg?param=50y50&amp;quality=100"></a><span
+																data-res-id="1805842261" data-res-type="18"
+																data-res-action="play" class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1805842261"><b title="欢迎光临">欢<div
+																				class="soil">笥纐</div>迎光临</b></a></span>
+															</div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">03:49</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1805842261"
+															data-res-action="addto"></a><span data-res-id="1805842261"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1805842261"
+															data-res-type="18" data-res-action="share"
+															data-res-name="欢迎光临" data-res-author="Jony J"
+															data-res-pic="http://p3.music.126.net/YEkGgqCanqQ3cR1FAevJfw==/109951165554530175.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1805842261" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="Jony J"><span title="Jony J"><a class=""
+																href="/artist?id=784257" hidefocus="true">Jony&nbsp;J</a></span></div>
+												</td>
+											</tr>
+											<tr id="18053783301608646713496" class=" ">
+												<td>
+													<div class="hd"><span class="num">4</span>
+														<div class="rk "><span class="u-icn u-icn-75"></span></div>
+													</div>
+												</td>
+												<td class="">
+													<div class="f-cb">
+														<div class="tt"><span data-res-id="1805378330"
+																data-res-type="18" data-res-action="play"
+																class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1805378330"><b title="Flags">F
+																			<div class="soil">eSyh</div>
+																			lags</b></a></span></div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">03:36</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1805378330"
+															data-res-action="addto"></a><span data-res-id="1805378330"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1805378330"
+															data-res-type="18" data-res-action="share"
+															data-res-name="Flags" data-res-author="Coldplay"
+															data-res-pic="http://p4.music.126.net/qRXFd2JeTGdjVHlv4qTZfg==/109951165549983781.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1805378330" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="Coldplay"><span title="Coldplay"><a
+																class="" href="/artist?id=89365" hidefocus="true">Cold
+																play</a></span></div>
+												</td>
+											</tr>
+											<tr id="18053711711608646713496" class="even ">
+												<td>
+													<div class="hd"><span class="num">5</span>
+														<div class="rk "><span class="u-icn u-icn-75"></span></div>
+													</div>
+												</td>
+												<td class="">
+													<div class="f-cb">
+														<div class="tt"><span data-res-id="1805371171"
+																data-res-type="18" data-res-action="play"
+																class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1805371171"><b title="风儿吹">风儿吹</b></a></span>
+															</div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">03:10</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1805371171"
+															data-res-action="addto"></a><span data-res-id="1805371171"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1805371171"
+															data-res-type="18" data-res-action="share"
+															data-res-name="风儿吹" data-res-author="要不要买菜"
+															data-res-pic="http://p4.music.126.net/hnFq-qGzeIA99l7Kj4V1Og==/109951165549916980.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1805371171" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="要不要买菜"><span title="要不要买菜"><a class=""
+																href="/artist?id=33435854" hidefocus="true">要不要买菜</a></span></div>
+												</td>
+											</tr>
+											<tr id="18053778901608646713496" class=" ">
+												<td>
+													<div class="hd"><span class="num">6</span>
+														
+													</div>
+												</td>
+												<td class="">
+													<div class="f-cb">
+														<div class="tt"><span data-res-id="1805377890"
+																data-res-type="18" data-res-action="play"
+																class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1805377890"><b title="无法坠入爱河">无法坠
+																			<div class="soil">却下值</div>
+																			入爱河</b></a></span></div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">02:59</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1805377890"
+															data-res-action="addto"></a><span data-res-id="1805377890"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1805377890"
+															data-res-type="18" data-res-action="share"
+															data-res-name="无法坠入爱河" data-res-author="叶琼琳/未来星B3Rich"
+															data-res-pic="http://p4.music.126.net/sB1lmNvLcaQsssME6KbbwA==/109951165549955294.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1805377890" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="叶琼琳/未来星B3Rich"><span
+															title="叶琼琳/未来星B3Rich"><a class="" href="/artist?id=35187624"
+																hidefocus="true">叶琼琳</a>/<a
+																class="" href="/artist?id=1151001"
+																hidefocus="true">未来星B3
+																Rich</a></span></div>
+												</td>
+											</tr>
+											<tr id="14906111671608646713496" class="even ">
+												<td>
+													<div class="hd"><span class="num">7</span>
+														
+												</td>
+												<td class="">
+													<div class="f-cb">
+														<div class="tt"><span data-res-id="1490611167"
+																data-res-type="18" data-res-action="play"
+																class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1490611167"><b
+																			title="无法坠入爱河&nbsp;(Punk&nbsp;Version)">无法坠入爱河&nbsp;(Punk&nbsp;Ver
+																			<div class="soil">N</div>sion)</b></a><span
+																		data-res-id="1490611167" data-res-action="mv"
+																		title="播放mv" class="mv">MV</span></span></div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">02:55</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1490611167"
+															data-res-action="addto"></a><span data-res-id="1490611167"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1490611167"
+															data-res-type="18" data-res-action="share"
+															data-res-name="无法坠入爱河 (Punk Version)"
+															data-res-author="未来星B3Rich"
+															data-res-pic="http://p4.music.126.net/J8ZRTd7lUq5PkV2e03d6gw==/109951165420588379.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1490611167" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="未来星B3Rich"><span title="未来星B3Rich"><a
+																class="" href="/artist?id=1151001" hidefocus="true">未来星
+																B3Rich</a></span></div>
+												</td>
+											</tr>
+											<tr id="18050884481608646713496" class=" ">
+												<td>
+													<div class="hd"><span class="num">8</span>
+														
+													</div>
+												</td>
+												<td class="">
+													<div class="f-cb">
+														<div class="tt"><span data-res-id="1805088448"
+																data-res-type="18" data-res-action="play"
+																class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1805088448"><b
+																			title="大雾&nbsp;(demo)">大雾&nbsp;(de<div
+																				class="soil">euD</div>mo)</b></a></span>
+															</div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">02:14</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1805088448"
+															data-res-action="addto"></a><span data-res-id="1805088448"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1805088448"
+															data-res-type="18" data-res-action="share"
+															data-res-name="大雾 (demo)" data-res-author="未知音素/张一乔"
+															data-res-pic="http://p4.music.126.net/0fL8vcI942Wocdt4M1dp4A==/109951165547470592.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1805088448" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="未知音素/张一乔"><span title="未知音素/张一乔"><a
+																class="" href="/artist?id=46334269" hidefocus="true">未知
+																音素</a>/<a class=""
+																href="/artist?id=46334270" hidefocus="true">张一乔</a></span></div>
+												</td>
+											</tr>
+											<tr id="14923194321608646713496" class="even ">
+												<td>
+													<div class="hd"><span class="num">9</span>
+														<div class="rk "><span class="u-icn u-icn-75"></span></div>
+													</div>
+												</td>
+												<td class="">
+													<div class="f-cb">
+														<div class="tt"><span data-res-id="1492319432"
+																data-res-type="18" data-res-action="play"
+																class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1492319432"><b
+																			title="在哪里都很好 - (Wherever)">在哪里<div
+																				class="soil">见府音</div>都很好</b></a><span
+																		title="Wherever" class="s-fc8"> - (Where<div
+																			class="soil">Go</div>ver)</span><span
+																		data-res-id="1492319432" data-res-action="mv"
+																		title="播放mv" class="mv">MV</span></span></div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">03:53</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1492319432"
+															data-res-action="addto"></a><span data-res-id="1492319432"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1492319432"
+															data-res-type="18" data-res-action="share"
+															data-res-name="在哪里都很好" data-res-author="蔡健雅/王源"
+															data-res-pic="http://p4.music.126.net/ilhSwYuf1t3_vVu5eU5Pnw==/109951165434590354.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1492319432" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="蔡健雅/王源"><span title="蔡健雅/王源"><a class=""
+																href="/artist?id=7214" hidefocus="true">蔡健雅</a>/<a class=""
+																href="/artist?id=956386" hidefocus="true">王源</a></span></div>
+												</td>
+											</tr>
+											<tr id="14858503511608646713496" class=" ">
+												<td>
+													<div class="hd"><span class="num">10</span>
+														<div class="rk "><span class="u-icn u-icn-75"></span></div>
+													</div>
+												</td>
+												<td class="">
+													<div class="f-cb">
+														<div class="tt"><span data-res-id="1485850351"
+																data-res-type="18" data-res-action="play"
+																class="ply ">&nbsp;</span>
+															<div class="ttc"><span class="txt"><a
+																		href="/song?id=1485850351"><b
+																			title="声声慢&nbsp;(京韵版) - (不曾遗忘的符号)">声声慢<div
+																				class="soil">Xfo1</div>
+																			&nbsp;(京韵版)</b></a><span title="不曾遗忘的符号"
+																		class="s-fc8"> - (不曾<div class="soil">錶鋄痮述</div>
+																		遗忘的符号)</span><span data-res-id="1485850351"
+																		data-res-action="mv" title="播放mv"
+																		class="mv">MV</span></span></div>
+														</div>
+													</div>
+												</td>
+												<td class=" s-fc3"><span class="u-dur ">04:25</span>
+													<div class="opt hshow"><a class="u-icn u-icn-81 icn-add"
+															href="javascript:;" title="添加到播放列表" hidefocus="true"
+															data-res-type="18" data-res-id="1485850351"
+															data-res-action="addto"></a><span data-res-id="1485850351"
+															data-res-type="18" data-res-action="fav" class="icn icn-fav"
+															title="收藏"></span><span data-res-id="1485850351"
+															data-res-type="18" data-res-action="share"
+															data-res-name="声声慢 (京韵版)" data-res-author="张一山/孙萍"
+															data-res-pic="http://p3.music.126.net/0X0cvRif6qa0AE-yBibf7g==/109951165379412073.jpg"
+															class="icn icn-share" title="分享">分享</span><span
+															data-res-id="1485850351" data-res-type="18"
+															data-res-action="download" class="icn icn-dl"
+															title="下载"></span></div>
+												</td>
+												<td class="">
+													<div class="text" title="张一山/孙萍"><span title="张一山/孙萍"><a class=""
+																href="/artist?id=1049983" hidefocus="true">张一山</a>/<a class=""
+																href="/artist?id=37077708" hidefocus="true">孙萍</a></span></div>
+												</td>
+											</tr>
+									</tbody>
+									</table>
+									<div class="j-flag auto-1608646713499-parent">
+										<div class="auto-1608646713499 u-page"><a href="#"
+												class="zbtn zprv js-p-1608646713496 js-disabled"
+												id="auto-id-NaqNywUrqD152nRC">上一页</a><a href="#"
+												class="zpgi zpg1 js-i-1608646713496 js-selected"
+												id="auto-id-9NU53JiF8Q63RCgw">1</a><a href="#"
+												class="zpgi zpg2 js-i-1608646713496"
+												id="auto-id-TVfgkF4HeniEMvOI">2</a><a href="#"
+												class="zpgi zpg3 js-i-1608646713496"
+												id="auto-id-JZPC3Vwl5XNba7SU">3</a><a href="#"
+												class="zpgi zpg4 js-i-1608646713496"
+												id="auto-id-svmeBI2aCFBR8xtF">4</a><a href="#"
+												class="zpgi zpg5 js-i-1608646713496"
+												id="auto-id-WqzIwOz5L4kbzeTb">5</a><a href="#"
+												class="zpgi zpg6 js-i-1608646713496"
+												id="auto-id-y3OgraJ5O5siIKqg">6</a><a href="#"
+												class="zpgi zpg7 js-i-1608646713496"
+												id="auto-id-aP8pxvwSMlp3QL6F">7</a><a href="#"
+												class="zpgi zpg8 js-i-1608646713496"
+												id="auto-id-p8G1AgGIWfUzG29h">8</a><span class="zdot">...</span><a
+												href="#" class="zpgi zpg9 js-i-1608646713496"
+												id="auto-id-FMPfNJr0ynTTJpl3">10003</a><a href="#"
+												class="zbtn znxt js-n-1608646713496"
+												id="auto-id-VTxCok93COmrrQqT">下一页</a></div>
+									</div>
+									</div>	
+								</div>	
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<img style="width: 100%;" src="img/最下.jpg">
+	</div>
+	<div class="footer">
+        <div class="inner">
+            <img src="./img/syg.bmp" alt="" id="change" style="height: 32px;">
+            <img src="./img/bf.bmp" alt="" style="margin-left: 20px; height: 40px; width: 35px;" id="playmusic">
+            <img src="./img/xyg.bmp" alt="" id="change2" style="margin-left: 20px;height: 32px;">
+            <img src="" alt="" id="pic" style="height: 40px; width: 40px; border-radius: 10%; margin-left: 30px;">
+            <div class="play">
+                <div class="word">
+					<br>
+                    <p id="word1">歌曲名</p>
+                </div>
+                <div>
+                    <audio src="" controls="controls" class="player" id="audio"></audio>
+                </div>
+            </div>
+            <label style="color:white; margin-left: 50px;">
+                <h3><input type="checkbox" class="loop" id="loop" οnclick="loop(this)">循环播放</h3>
+            </label>
+
+        </div>
+
+    </div>
+</body>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    var audio = document.getElementById("audio");
+    var pic = document.getElementById("pic");
+    var word = document.getElementById("word1");
+    var change = document.getElementById("change");
+    var change2 = document.getElementById("change2");
+    var playmusic = document.getElementById("playmusic");
+    var loop = document.getElementById("loop");
+    playmusic.onclick = function () {
+        var tmp = playmusic.src;
+        if (tmp.indexOf("zt.bmp") >= 0) {
+            // 正在播放
+            audio.pause();
+            playmusic.src = "./img/bf.bmp";
+        } else {
+            // 暂停状态
+            audio.play();
+            playmusic.src = "./img/zt.bmp";
+        }
+    }
+
+    function getsong() {
+
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+                audio.load();
+
+            }
+        })
+
+    }
+    getsong();
+    change.onclick = function () {
+        playmusic.src = "./img/zt.bmp";
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+                audio.load();
+                audio.play();
+            }
+        })
+    }
+    change2.onclick = function () {
+        playmusic.src = "./img/zt.bmp";
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+
+                audio.load();
+                audio.play();
+            }
+        })
+    }
+    loop.onclick = function () {
+
+        if (loop.checked == true) {
+
+            audio.loop = true;
+
+        } else {
+
+            audio.loop = false;
+
+        }
+
+    }
+
+</script>
+
+</html>

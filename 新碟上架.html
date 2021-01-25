@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
+<link rel="stylesheet" type="text/css" href="./player.css">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./css/player.css">
+<link rel="stylesheet" type="text/css" href="./css/xdzs.css">
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.nav {
+			height: 70px;
+			background-color: #242424;
+			display: flex;
+			cursor: pointer;
+		}
+		.rem{
+			cursor: pointer;
+		}
+
+		.nav>div {
+			height: 70px;
+		}
+
+		.text {
+			text-align: center;
+			line-height: 70px;
+			overflow: hidden;
+		}
+
+		.rem {
+			height: 37px;
+			background-color: rgb(194, 12, 12);
+			display: flex;
+		}
+
+		.rem>div {
+			height: 37px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="nav">
+		<div class="首页" onclick="window.location.href= 'index.html';return false" style="width: 25%;"><img
+				style="height: 70px;width: 100%;" src="img/网易.jpg"></div>
+		<div class="text" onclick="window.location.href= 'index.html';return false" style="color:white;width:10%">
+			发现音乐</div>
+		<div class="text" onclick="window.location.href= '我的音乐.html';return false" style="color:white;width:10%">
+			我的音乐</div>
+		<div class="text" onclick="window.location.href= '朋友.html';return false" style="color:white;width:6%">朋友
+		</div>
+		<div class="text" onclick="window.open('https://music.163.com/store/product')" style="color:white;width:6%">
+			商城</div>
+		<div class="text" onclick="window.open('https://music.163.com/st/musician')" style="color:white;width:9%">
+			音乐人</div>
+		<div class="text" onclick="window.open('下载.html')" style="color:white;width:7%">下载客户端</div>
+		<div style="color:white;">
+			<form action="搜索音乐" method="get">
+				<br />
+				搜索:<input type="搜索" />
+			</form>
+		</div>
+	</div>
+	<div class="rem">
+		<div onclick="window.location.href= 'index.html';return false"
+			style="font-size: 10px;width: 30%;line-height:37px;overflow:hidden;text-align: right;color: white;">推荐
+		</div>
+		<div onclick="window.open('排行榜.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">排行榜
+		</div>
+		<div onclick="window.open('歌单.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌单
+		</div>
+		<div onclick="window.open('主播电台.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">主播电台
+		</div>
+		<div onclick="window.open('歌手.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌手
+		</div>
+		<div onclick="window.open('新碟上架.html','_self')"
+			style="font-size: 10px;width: 37%;line-height:37px;overflow:hidden;text-align: left;color: white;">新碟上架
+		</div>
+	</div>
+		<div class="g-wrap n-alblist f-pr " style="width: 1000px; margin: 0 auto;">
+			<div class="u-title f-cb">
+			<h3><span class="f-ff2">热门新碟</span></h3>
+			</div>
+			<ul class="m-cvrlst m-cvrlst-alb2 f-cb">
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p4.music.126.net/fwXShM46KdIj3hB8_lJ71g==/109951165545588869.jpg?param=130y130">
+			<a href="/album?id=120521903" class="msk" title="过"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120521903" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=120521903" title="过">过</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="王嘉尔 / 林俊杰">
+			<a class="s-fc3" href="/artist?id=1083118">王嘉尔</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=3684">林俊杰</a>
+			</span>
+			</p>
+			</li>
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p4.music.126.net/jpelUV507276mmlQrzYx1g==/109951165533118533.jpg?param=130y130">
+			<a href="/album?id=120321112" class="msk" title="evermore"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120321112" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=120321112" title="evermore">evermore</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="Taylor Swift">
+			<a class="s-fc3" href="/artist?id=44266">Taylor Swift</a>
+			</span>
+			</p>
+			</li>
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p4.music.126.net/yITtaf5rX2hOXQSBn60opA==/109951165498613448.jpg?param=130y130">
+			<a href="/album?id=98799011" class="msk" title="耗尽"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="98799011" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=98799011" title="耗尽">耗尽</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="薛之谦 / 郭聪明">
+			<a class="s-fc3" href="/artist?id=5781">薛之谦</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=12479356">郭聪明</a>
+			</span>
+			</p>
+			</li>
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p3.music.126.net/LOekHheOMDpdjuXrXWjfJg==/109951165483194861.jpg?param=130y130">
+			<a href="/album?id=98561258" class="msk" title="狼殿下 影视原声碟PART.1"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="98561258" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=98561258" title="狼殿下 影视原声碟PART.1">狼殿下 影视原声碟PART.1</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="群星">
+			<a class="s-fc3" href="/artist?id=122455">群星</a>
+			</span>
+			</p>
+			</li>
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p4.music.126.net/flFrObLA9GZdj8B0b6ni1A==/109951165480807278.jpg?param=130y130">
+			<a href="/album?id=98517711" class="msk" title="是但求其爱"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="98517711" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=98517711" title="是但求其爱">是但求其爱</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="陈奕迅">
+			<a class="s-fc3" href="/artist?id=2116">陈奕迅</a>
+			</span>
+			</p>
+			</li>
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p3.music.126.net/sKJAa_JqQsgv8hm4s1brzg==/109951165482631929.jpg?param=130y130">
+			<a href="/album?id=98517879" class="msk" title="Monster"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="98517879" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=98517879" title="Monster">Monster</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="Shawn Mendes / Justin Bieber">
+			<a class="s-fc3" href="/artist?id=956238">Shawn Mendes</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=35531">Justin Bieber</a>
+			</span>
+			</p>
+			</li>
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p4.music.126.net/cYokJRjJvsOvGkGHliJlGQ==/109951164614170425.jpg?param=130y130">
+			<a href="/album?id=73876792" class="msk" title="未·LIVE"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="73876792" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=73876792" title="未·LIVE">未·LIVE</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="张杰">
+			<a class="s-fc3" href="/artist?id=6472">张杰</a>
+			</span>
+			</p>
+			</li>
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p3.music.126.net/ynlEvENFDF9W5SpFTzU1mw==/109951165473772228.jpg?param=130y130">
+			<a href="/album?id=98368946" class="msk" title="RE-CODE"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="98368946" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=98368946" title="RE-CODE">RE-CODE</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="CNBLUE">
+			<a class="s-fc3" href="/artist?id=126524">CNBLUE</a>
+			</span>
+			</p>
+			</li>
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p3.music.126.net/ilhSwYuf1t3_vVu5eU5Pnw==/109951165434590354.jpg?param=130y130">
+			<a href="/album?id=97772220" class="msk" title="不完美人生指南"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="97772220" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=97772220" title="不完美人生指南">不完美人生指南</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="陈绮贞 / 鬼卞 / 周深 / 王子 / A-Lin / 倪子冈 / 刘若英 / 柯智棠 / 毛不易 / 祁紫檀 / 徐佳莹 / HUSH / 蔡健雅 / 王源 / 莫文蔚 / 郭一凡 / 魏如萱 / 许光汉 / 苏运莹 / 岑宁儿 / 艾怡良 / Matzka玛斯卡 / 马思唯 / NINEONE#">
+			<a class="s-fc3" href="/artist?id=7217">陈绮贞</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=1008034">鬼卞</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=1030001">周深</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=32453904">王子</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=7063">A-Lin</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=4670">倪子冈</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=8326">刘若英</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=991002">柯智棠</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=12138269">毛不易</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=1049443">祁紫檀</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=9940">徐佳莹</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=1053259">HUSH</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=7214">蔡健雅</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=956386">王源</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=8926">莫文蔚</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=2987">郭一凡</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=9609">魏如萱</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=33772751">许光汉</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=1193259">苏运莹</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=7409">岑宁儿</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=167006">艾怡良</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=11976077">Matzka玛斯卡</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=1132392">马思唯</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=12276375">NINEONE#</a>
+			</span>
+			</p>
+			</li>
+			<li>
+			<div class="u-cover u-cover-alb2">
+			<img src="http://p4.music.126.net/aXvj5BYRCoCWgdD40_CgXg==/109951165425092026.jpg?param=130y130">
+			<a href="/album?id=97118598" class="msk" title="如果当时2020"></a>
+			<a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="97118598" data-res-action="play"></a>
+			</div>
+			<p class="dec"><a class="tit f-thide s-fc0" href="/album?id=97118598" title="如果当时2020">如果当时2020</a></p>
+			<p class="f-thide">
+			<span class="nm f-thide" title="许嵩 / 朱婷婷">
+			<a class="s-fc3" href="/artist?id=5771">许嵩</a>
+			&nbsp;/&nbsp;
+			<a class="s-fc3" href="/artist?id=37207396">朱婷婷</a>
+			</span>
+			</p>
+			</li>
+			</ul>
+			<div class="u-title f-cb" id="allAlbumList">
+			<h3><span class="f-ff2">全部新碟</span></h3>
+			<div class="tab" id="areaList">
+			<a href="/discover/album/#/?area=ALL" class="s-fc6" id="auto-id-AmyHqDOTJrECUUz6">全部</a><span class="line">|</span>
+			<a href="/discover/album/#/?area=ZH" class="s-fc3" id="auto-id-fwPt1RfVEOxkDnH5">华语</a><span class="line">|</span>
+			<a href="/discover/album/#/?area=EA" class="s-fc3" id="auto-id-S88ZINAHars5Zis2">欧美</a><span class="line">|</span>
+			<a href="/discover/album/#/?area=KR" class="s-fc3" id="auto-id-l0TzcVcyJRI5lmQ0">韩国</a><span class="line">|</span>
+			<a href="/discover/album/#/?area=JP" class="s-fc3" id="auto-id-bAsP8DvWSBv2nXQ4">日本</a>
+			</div>
+			</div>
+			<ul class="m-cvrlst m-cvrlst-alb2 f-cb" id="m-album-box"><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/lXTf4woDV4g0FC1GRzMuKQ==/109951165549678566.jpg?param=130y130"><a href=" /album?id=120614320" class="msk" title="恋与流年：恋与制作人三周年原声音乐集"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120614320" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120614320" title="恋与流年：恋与制作人三周年原声音乐集">恋与流年：恋与制作人三周年原声音乐集</a></p><p class="f-thide"><span class="nm f-thide" title="恋与制作人"><a href="/artist?id=30251044" class="s-fc3">恋与制作人</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/yqf61rtkb2diVUKRtfiACA==/109951165551681511.jpg?param=130y130"><a href=" /album?id=120655121" class="msk" title="宇宙出发"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120655121" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120655121" title="宇宙出发">宇宙出发</a></p><p class="f-thide"><span class="nm f-thide" title="沈梦辰&nbsp;/&nbsp;李汶翰&nbsp;/&nbsp;黄明昊&nbsp;(Justin)&nbsp;/&nbsp;胡春杨&nbsp;/&nbsp;陈昕葳"><a href="/artist?id=12380025" class="s-fc3">沈梦辰</a>&nbsp;/&nbsp;<a href="/artist?id=27889649" class="s-fc3">李汶翰</a>&nbsp;/&nbsp;<a href="/artist?id=13057497" class="s-fc3">黄明昊&nbsp;(Justin)</a>&nbsp;/&nbsp;<a href="/artist?id=31633653" class="s-fc3">胡春杨</a>&nbsp;/&nbsp;<a href="/artist?id=46347584" class="s-fc3">陈昕葳</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/RKb1-Kk-H2NxBlxs62eSPw==/109951165529890841.jpg?param=130y130"><a href=" /album?id=99341990" class="msk" title="Xiu"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="99341990" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=99341990" title="Xiu">Xiu</a></p><p class="f-thide"><span class="nm f-thide" title="Yu&nbsp;Su"><a href="/artist?id=31348002" class="s-fc3">Yu&nbsp;Su</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/ydlL4f8AvEsL0WIZOOpWzw==/109951165547333206.jpg?param=130y130"><a href=" /album?id=120562077" class="msk" title="褪去伪装"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120562077" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120562077" title="褪去伪装">褪去伪装</a></p><p class="f-thide"><span class="nm f-thide" title="成容容"><a href="/artist?id=36097575" class="s-fc3">成容容</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/ditguG-uGWdBl2FC8YoY4w==/109951165545055757.jpg?param=130y130"><a href=" /album?id=120509728" class="msk" title="ALMIGHTY～仮面の約束"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120509728" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120509728" title="ALMIGHTY～仮面の約束">ALMIGHTY～仮面の約束</a></p><p class="f-thide"><span class="nm f-thide" title="東京スカパラダイスオーケストラ&nbsp;/&nbsp;川上洋平"><a href="/artist?id=21846" class="s-fc3">東京スカパラダイスオーケストラ</a>&nbsp;/&nbsp;<a href="/artist?id=29964376" class="s-fc3">川上洋平</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/fhMUmqhS89xL_IZ11qI_ig==/109951165549737498.jpg?param=130y130"><a href=" /album?id=120613828" class="msk" title="转身前抱紧"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120613828" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120613828" title="转身前抱紧">转身前抱紧</a></p><p class="f-thide"><span class="nm f-thide" title="夏研"><a href="/artist?id=34804152" class="s-fc3">夏研</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/ZmoGI6mPalunMQ4IonK0pg==/109951165549990124.jpg?param=130y130"><a href=" /album?id=120618652" class="msk" title="Memory"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120618652" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120618652" title="Memory">Memory</a></p><p class="f-thide"><span class="nm f-thide" title="杜星萤"><a href="/artist?id=12905160" class="s-fc3">杜星萤</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/WY9JH6ew4OHV-R0BmNoZaQ==/109951165550002275.jpg?param=130y130"><a href=" /album?id=120617801" class="msk" title="雪糕"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120617801" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120617801" title="雪糕">雪糕</a></p><p class="f-thide"><span class="nm f-thide" title="火鸡&nbsp;/&nbsp;嘻嘻琳"><a href="/artist?id=28862362" class="s-fc3">火鸡</a>&nbsp;/&nbsp;<a href="/artist?id=34277064" class="s-fc3">嘻嘻琳</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/FuzPAHs0jZdtSlthM8btZA==/109951165547382805.jpg?param=130y130"><a href=" /album?id=120562498" class="msk" title="时间线"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120562498" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120562498" title="时间线">时间线</a></p><p class="f-thide"><span class="nm f-thide" title="于潼"><a href="/artist?id=30476029" class="s-fc3">于潼</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/ig1zE_ji1BSgmCqslWu08Q==/109951165529535306.jpg?param=130y130"><a href=" /album?id=99324326" class="msk" title="半熟·秘密"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="99324326" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=99324326" title="半熟·秘密">半熟·秘密</a></p><p class="f-thide"><span class="nm f-thide" title="段奥娟"><a href="/artist?id=28389406" class="s-fc3">段奥娟</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/VsjO7ZVzEhHBqCxVlPIg9w==/109951165549332587.jpg?param=130y130"><a href=" /album?id=120607178" class="msk" title="暮色外衣"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120607178" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120607178" title="暮色外衣">暮色外衣</a></p><p class="f-thide"><span class="nm f-thide" title="曾楠&nbsp;/&nbsp;保质期艺术家"><a href="/artist?id=1039021" class="s-fc3">曾楠</a>&nbsp;/&nbsp;<a href="/artist?id=37658788" class="s-fc3">保质期艺术家</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/TfeEubFlp5Yq_u9__uFXqg==/109951165545303890.jpg?param=130y130"><a href=" /album?id=120516872" class="msk" title="복수해라 OST Part.7"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120516872" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120516872" title="복수해라 OST Part.7">복수해라 OST Part.7</a></p><p class="f-thide"><span class="nm f-thide" title="周浩"><a href="/artist?id=13042332" class="s-fc3">周浩</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/FHO9hrqwDPLeOtLNUKMHDQ==/109951165549754013.jpg?param=130y130"><a href=" /album?id=120613822" class="msk" title="终极笔记 影视原声带"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120613822" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120613822" title="终极笔记 影视原声带">终极笔记 影视原声带</a></p><p class="f-thide"><span class="nm f-thide" title="群星"><a href="/artist?id=122455" class="s-fc3">群星</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/X_KDW4sYpeBi12TWg7yywA==/109951165549829053.jpg?param=130y130"><a href=" /album?id=120615294" class="msk" title="小圆满"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120615294" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120615294" title="小圆满">小圆满</a></p><p class="f-thide"><span class="nm f-thide" title="MAD"><a href="/artist?id=13151821" class="s-fc3">MAD</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/RJrtWv5FbE3Tq9MxXkT7QQ==/109951165550007167.jpg?param=130y130"><a href=" /album?id=120617813" class="msk" title="星辰记"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120617813" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120617813" title="星辰记">星辰记</a></p><p class="f-thide"><span class="nm f-thide" title="苏琛"><a href="/artist?id=1146106" class="s-fc3">苏琛</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/6-H-qfbtwuzWRQOq0OqeRg==/109951165549835713.jpg?param=130y130"><a href=" /album?id=120616302" class="msk" title="为你揽星"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120616302" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120616302" title="为你揽星">为你揽星</a></p><p class="f-thide"><span class="nm f-thide" title="巫汐"><a href="/artist?id=12105056" class="s-fc3">巫汐</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/W5rHRhG2yXUbQmaXPbJv-Q==/109951165549776589.jpg?param=130y130"><a href=" /album?id=120614991" class="msk" title="洗心革面"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120614991" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120614991" title="洗心革面">洗心革面</a></p><p class="f-thide"><span class="nm f-thide" title="姜铭杨"><a href="/artist?id=13111159" class="s-fc3">姜铭杨</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/JchbtaltB8I7u8zGlHRzig==/109951165458428849.jpg?param=130y130"><a href=" /album?id=98110716" class="msk" title="小男孩的歌"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="98110716" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=98110716" title="小男孩的歌">小男孩的歌</a></p><p class="f-thide"><span class="nm f-thide" title="刘毅"><a href="/artist?id=37446242" class="s-fc3">刘毅</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/yIXCknjj9BAeuloiO1th0Q==/109951165547019802.jpg?param=130y130"><a href=" /album?id=120555498" class="msk" title="说书人"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120555498" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120555498" title="说书人">说书人</a></p><p class="f-thide"><span class="nm f-thide" title="尹昔眠&nbsp;/&nbsp;小田音乐社"><a href="/artist?id=12316248" class="s-fc3">尹昔眠</a>&nbsp;/&nbsp;<a href="/artist?id=12852319" class="s-fc3">小田音乐社</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/88fvQQvG7MXi6wDBAG8ivg==/109951165549744531.jpg?param=130y130"><a href=" /album?id=120613806" class="msk" title="中央车站"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120613806" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120613806" title="中央车站">中央车站</a></p><p class="f-thide"><span class="nm f-thide" title="橙大蕾蕾"><a href="/artist?id=12085447" class="s-fc3">橙大蕾蕾</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/gSbFYXEc2XEGyMZoAIKyQg==/109951165547306929.jpg?param=130y130"><a href=" /album?id=120560975" class="msk" title="自我成全"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120560975" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120560975" title="自我成全">自我成全</a></p><p class="f-thide"><span class="nm f-thide" title="郝琪力"><a href="/artist?id=12260235" class="s-fc3">郝琪力</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/tkNFKcThMz-sh1y9WPkzhQ==/109951165547456200.jpg?param=130y130"><a href=" /album?id=120564055" class="msk" title="Never Know"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120564055" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120564055" title="Never Know">Never Know</a></p><p class="f-thide"><span class="nm f-thide" title="HAO付豪"><a href="/artist?id=1038367" class="s-fc3">HAO付豪</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/xVupLc30PDnCMCnW5EFkog==/109951165549747160.jpg?param=130y130"><a href=" /album?id=120614762" class="msk" title="秦淮河边的陈年往事"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120614762" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120614762" title="秦淮河边的陈年往事">秦淮河边的陈年往事</a></p><p class="f-thide"><span class="nm f-thide" title="黄诗扶"><a href="/artist?id=12308369" class="s-fc3">黄诗扶</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/--0v_Rmy6yjx_gTUFokihw==/109951165529776005.jpg?param=130y130"><a href=" /album?id=99328314" class="msk" title="难书一叶秋"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="99328314" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=99328314" title="难书一叶秋">难书一叶秋</a></p><p class="f-thide"><span class="nm f-thide" title="灼夭&nbsp;/&nbsp;小田音乐社"><a href="/artist?id=12258760" class="s-fc3">灼夭</a>&nbsp;/&nbsp;<a href="/artist?id=12852319" class="s-fc3">小田音乐社</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/aYP5UOge6IEGC6rVZWxW3A==/109951165547561780.jpg?param=130y130"><a href=" /album?id=120564753" class="msk" title="长夜"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120564753" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120564753" title="长夜">长夜</a></p><p class="f-thide"><span class="nm f-thide" title="王梓钰"><a href="/artist?id=12048239" class="s-fc3">王梓钰</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/o-TIQx1UBsRF2Es9DRQyAA==/109951165547373285.jpg?param=130y130"><a href=" /album?id=120561564" class="msk" title="勿忘"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120561564" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120561564" title="勿忘">勿忘</a></p><p class="f-thide"><span class="nm f-thide" title="NL不分"><a href="/artist?id=190349" class="s-fc3">NL不分</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p2.music.126.net/VJM5m0T3ulssGpy5RrOU6g==/109951165525412576.jpg?param=130y130"><a href=" /album?id=99236915" class="msk" title="我的不惑青春 电视原声带"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="99236915" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=99236915" title="我的不惑青春 电视原声带">我的不惑青春 电视原声带</a></p><p class="f-thide"><span class="nm f-thide" title="赵天宇&nbsp;/&nbsp;大壮&nbsp;/&nbsp;钟易轩&nbsp;/&nbsp;张洢豪&nbsp;/&nbsp;王筝&nbsp;/&nbsp;孟慧圆&nbsp;/&nbsp;刘通TONG"><a href="/artist?id=12328103" class="s-fc3">赵天宇</a>&nbsp;/&nbsp;<a href="/artist?id=12146142" class="s-fc3">大壮</a>&nbsp;/&nbsp;<a href="/artist?id=12622588" class="s-fc3">钟易轩</a>&nbsp;/&nbsp;<a href="/artist?id=12554571" class="s-fc3">张洢豪</a>&nbsp;/&nbsp;<a href="/artist?id=9607" class="s-fc3">王筝</a>&nbsp;/&nbsp;<a href="/artist?id=12091129" class="s-fc3">孟慧圆</a>&nbsp;/&nbsp;<a href="/artist?id=12183522" class="s-fc3">刘通TONG</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/iEvIRueeRLjI-Y45zXRfvw==/109951165549667668.jpg?param=130y130"><a href=" /album?id=120613339" class="msk" title="姐姐的爱乐之程 第7期"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120613339" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120613339" title="姐姐的爱乐之程 第7期">姐姐的爱乐之程 第7期</a></p><p class="f-thide"><span class="nm f-thide" title="姐姐的爱乐之程"><a href="/artist?id=37234220" class="s-fc3">姐姐的爱乐之程</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/fJz7RgDwxXT2AuE8cVSfFw==/109951165543471386.jpg?param=130y130"><a href=" /album?id=120474968" class="msk" title="身材管理"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120474968" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120474968" title="身材管理">身材管理</a></p><p class="f-thide"><span class="nm f-thide" title="十七草"><a href="/artist?id=12270985" class="s-fc3">十七草</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/SDgrh3wguHlvAz1rRcNC4Q==/109951165549421671.jpg?param=130y130"><a href=" /album?id=120609242" class="msk" title="嗨唱转起来第二季 第10期"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120609242" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120609242" title="嗨唱转起来第二季 第10期">嗨唱转起来第二季 第10期</a></p><p class="f-thide"><span class="nm f-thide" title="嗨唱转起来"><a href="/artist?id=33469767" class="s-fc3">嗨唱转起来</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/0BbKYBR5Elhz142Ce1rW6Q==/109951165549633279.jpg?param=130y130"><a href=" /album?id=120613059" class="msk" title="殊遇天心"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120613059" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120613059" title="殊遇天心">殊遇天心</a></p><p class="f-thide"><span class="nm f-thide" title="RaJor&nbsp;/&nbsp;Mario&nbsp;/&nbsp;大乐不良署"><a href="/artist?id=1195065" class="s-fc3">RaJor</a>&nbsp;/&nbsp;<a href="/artist?id=1038238" class="s-fc3">Mario</a>&nbsp;/&nbsp;<a href="/artist?id=33993628" class="s-fc3">大乐不良署</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/pMJ8v4xXwx23Db1ylspNww==/109951165529149746.jpg?param=130y130"><a href=" /album?id=99321817" class="msk" title="那一首歌"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="99321817" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=99321817" title="那一首歌">那一首歌</a></p><p class="f-thide"><span class="nm f-thide" title="刘瑞琦"><a href="/artist?id=840134" class="s-fc3">刘瑞琦</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/sB1lmNvLcaQsssME6KbbwA==/109951165549955294.jpg?param=130y130"><a href=" /album?id=120617506" class="msk" title="无法坠入爱河"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120617506" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120617506" title="无法坠入爱河">无法坠入爱河</a></p><p class="f-thide"><span class="nm f-thide" title="叶琼琳&nbsp;/&nbsp;未来星B3Rich"><a href="/artist?id=35187624" class="s-fc3">叶琼琳</a>&nbsp;/&nbsp;<a href="/artist?id=1151001" class="s-fc3">未来星B3Rich</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/nHQTOFmDgaNnqdYSrrtmVw==/109951165545448781.jpg?param=130y130"><a href=" /album?id=120519869" class="msk" title="窗外又下起了雨 这是我最喜欢的天气 我想和你一起淋雨 你却骂我没出息"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120519869" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120519869" title="窗外又下起了雨 这是我最喜欢的天气 我想和你一起淋雨 你却骂我没出息">窗外又下起了雨 这是我最喜欢的天气 我想和你一起淋雨 你却骂我没出息</a></p><p class="f-thide"><span class="nm f-thide" title="周末"><a href="/artist?id=31979800" class="s-fc3">周末</a></span></p></div></li><li><div class="u-cover u-cover-alb2"><img src="https://p1.music.126.net/_OK6OHiMwd5NVWNM95OGCQ==/109951165549640852.jpg?param=130y130"><a href=" /album?id=120613176" class="msk" title="风起神谋"></a><a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="120613176" data-res-action="play"></a><p class="dec"><a class="tit f-thide s-fc0" href=" /album?id=120613176" title="风起神谋">风起神谋</a></p><p class="f-thide"><span class="nm f-thide" title="岚之调&nbsp;/&nbsp;平纱落雁音乐团队"><a href="/artist?id=1197045" class="s-fc3">岚之调</a>&nbsp;/&nbsp;<a href="/artist?id=999215" class="s-fc3">平纱落雁音乐团队</a></span></p></div></li></ul>
+			<div id="m-pl-pager" class="auto-1608442462292-parent"><div class="auto-1608442462292 u-page"><a href="#" class="zbtn zprv js-p-1608442462290 js-disabled" id="auto-id-nwTaPX9iW9TNPuA8">上一页</a><a href="#" class="zpgi zpg1 js-i-1608442462290 js-selected" id="auto-id-JtIm3J0Cq4fBJFz3">1</a><a href="#" class="zpgi zpg2 js-i-1608442462290" id="auto-id-KDh4i7oIFx6Sa5ag">2</a><a href="#" class="zpgi zpg3 js-i-1608442462290" id="auto-id-J929mpDyuTHOvWTS">3</a><a href="#" class="zpgi zpg4 js-i-1608442462290" id="auto-id-b6kX1FyyaWPGDnXL">4</a><a href="#" class="zpgi zpg5 js-i-1608442462290" id="auto-id-h9UgVeSd2qPCZAfE">5</a><a href="#" class="zpgi zpg6 js-i-1608442462290" id="auto-id-HAGMOfdcHAmcZZda">6</a><a href="#" class="zpgi zpg7 js-i-1608442462290" id="auto-id-I73ZMByAwLBlmtdz">7</a><a href="#" class="zpgi zpg8 js-i-1608442462290" id="auto-id-5NTpMtIAP9gpD8p1">8</a><span class="zdot">...</span><a href="#" class="zpgi zpg9 js-i-1608442462290" id="auto-id-3MAqQkw42AZ44h1O">15</a><a href="#" class="zbtn znxt js-n-1608442462290" id="auto-id-OXJcTozGTUQe5XZ5">下一页</a></div></div>
+			</div>
+ <div class="footer">
+        <div class="inner">
+            <img src="./img/syg.bmp" alt="" id="change" style="height: 32px;">
+            <img src="./img/bf.bmp" alt="" style="margin-left: 20px; height: 40px; width: 35px;" id="playmusic">
+            <img src="./img/xyg.bmp" alt="" id="change2" style="margin-left: 20px;height: 32px;">
+            <img src="" alt="" id="pic" style="height: 40px; width: 40px; border-radius: 10%; margin-left: 30px;">
+            <div class="play">
+                <div class="word">
+<br>
+                    <p id="word1">歌曲名</p>
+                </div>
+                <div>
+                    <audio src="" controls="controls" class="player" id="audio"></audio>
+                </div>
+            </div>
+            <label style="color:white; margin-left: 50px;">
+                <h3><input type="checkbox" class="loop" id="loop" οnclick="loop(this)">循环播放</h3>
+            </label>
+
+        </div>
+
+    </div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+
+    var audio = document.getElementById("audio");
+    var pic = document.getElementById("pic");
+    var word = document.getElementById("word1");
+    var change = document.getElementById("change");
+    var change2 = document.getElementById("change2");
+    var playmusic = document.getElementById("playmusic");
+    var loop = document.getElementById("loop");
+    playmusic.onclick = function () {
+        var tmp = playmusic.src;
+        if (tmp.indexOf("zt.bmp") >= 0) {
+            // 正在播放
+            audio.pause();
+            playmusic.src = "./img/bf.bmp";
+        } else {
+            // 暂停状态
+            audio.play();
+            playmusic.src = "./img/zt.bmp";
+        }
+    }
+
+    function getsong() {
+
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+                audio.load();
+
+            }
+        })
+
+    }
+    getsong();
+    change.onclick = function () {
+        playmusic.src = "./img/zt.bmp";
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+                audio.load();
+                audio.play();
+            }
+        })
+    }
+    change2.onclick = function () {
+        playmusic.src = "./img/zt.bmp";
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+
+                audio.load();
+                audio.play();
+            }
+        })
+    }
+    loop.onclick = function () {
+
+        if (loop.checked == true) {
+
+            audio.loop = true;
+
+        } else {
+
+            audio.loop = false;
+
+        }
+
+    }
+
+</script>
+	</body>
+
+</html>

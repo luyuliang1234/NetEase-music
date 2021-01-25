@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.nav{
+				height: 70px;
+				background-color:black;
+				display: flex;
+			}
+			.nav>div{
+				height: 70px;
+			}
+			.text{
+				text-align: center;
+				line-height:70px;
+				overflow:hidden;
+			}
+			.rem{
+				height: 10px;
+				background-color: rgb(194,12,12) ;
+				display: flex;
+
+			}
+            .content {
+			height: 1080px;
+			width: 980px;
+			background-color: #fff;
+			margin: 0 auto;
+			border: 1px solid rgb(211, 211, 211);
+			display: flex;
+		}
+			.content-left{
+				width:53%;
+			}
+			.content-right{
+				width: 47%;
+			}
+			.m-srch .srch{
+			padding-left: 10px;
+			height: 32px;
+			width: 158px;
+			margin-top: 19px;
+			background-color: #fff;
+			border-radius: 32px;
+		}
+		.m-srch{
+			float: right;
+			width: 158px;
+			height: 32px;
+		}
+		.srch-in{
+			margin: 8px 0 0 0;
+			height: 16px;
+			width: 121.6px;
+			outline:medium;
+			border: 1px;
+		}
+		.srch-in:focus{
+			border:0px solid red;
+		}
+		input{
+			line-height: 16px;
+		}
+		.s-img{
+			padding-top: 5px;
+			height: 22px;
+			width: 23px;
+		}
+		.srch-span{
+			display: flex;
+		}
+		.chuang{
+			color: rgb(204,204,204);
+			font-size: 12px;
+			float: right;
+			width: 90px;
+			height: 32px;
+			margin: 19px 0 0 18px;
+			box-sizing: border-box;
+			padding-left: 16px;
+			border: 1px solid #4F4F4F;
+			background-position: 0 -140px;
+			line-height: 33px;
+			color: #ccc;
+			border-radius: 20px;
+		}
+		.login{
+			margin: 27px 0 0 12px;
+			color: rgb(204,204,204);
+			font-size: 13px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="首页" onclick="window.location.href= 'index.html';return false" style="width: 25%;"><img
+					style="height: 70px;width: 100%;" src="img/网易.jpg"></div>
+			<div class="text" onclick="window.location.href= 'index.html';return false" style="color:white;width:10%">发现音乐
+			</div>
+			<div class="text" onclick="window.location.href= '我的音乐.html';return false" style="color:white;width:10%">我的音乐
+			</div>
+			<div class="text" onclick="window.location.href= '朋友.html';return false" style="color:white;width:6%">朋友</div>
+			<div class="text" onclick="window.open('https://music.163.com/store/product')" style="color:white;width:6%">商城
+			</div>
+			<div class="text" onclick="window.open('https://music.163.com/st/musician')" style="color:white;width:9%">音乐人
+			</div>
+			<div class="text" onclick="window.open('下载.html')" style="color:white;width:7%">下载客户端</div>
+			<div class="m-srch">
+				<div class="srch" >
+					<span class="srch-span">
+						<img class="s-img" src="img/搜索.png"  />
+						<input type="text"  class="srch-in" id="srch-input"  placeholder="音乐/视频/电台/用户" />
+					</span>
+				</div>
+			</div>
+			<a onmousemove="changeColorO(this)" onmouseleave="changeColorB(this)" class="chuang" href="https://music.163.com/login?targetUrl=%2Fcreatorcenter">创作者中心</a>
+			<a class="login" href="https://music.163.com/#/login">登录</a>
+		</div>
+        <div class="rem"></div>
+        <div class="content">
+            <div class="content-left">
+                <img style="width: 100%;" src="img/我的左.jpg">
+            </div>
+            <div class="content-right">
+                <img style="width: 100%;" src="img/我的右上.jpg">
+                <a href="给冯璐璐自由发挥的登录.html"><img src="img/登录按键.jpg"></a>
+            </div>
+        </div>
+        <div>
+            <img style="width: 100%;" src="img/最下.jpg">
+        </div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+    .footer {
+
+            height: 60px;
+
+            width: 100%;
+
+            background-color: #000;
+            white-space: nowrap;
+            position: fixed;
+            border-top-left-radius: 20%;
+            border-top-right-radius: 20%;
+            bottom: 0;
+            opacity: 0.87;
+        }
+
+        .word {
+            height: 10px;
+            position: fixed;
+            width: 700px;
+            margin-top: 10px;
+            color: rgb(255, 255, 255);
+        }
+
+        .inner {
+            margin: 10px auto;
+            width: 1135px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .player {
+            width: 700px;
+            color: rgb(255, 255, 255);
+            border-radius: 50;
+            opacity: 0.9;
+            height: 25px;
+        }
+
+        .play {
+            height: 50px;
+            margin-left: 20px;
+
+        }
+
+        .loop {
+            zoom: 200%;
+            margin: 0;
+        }

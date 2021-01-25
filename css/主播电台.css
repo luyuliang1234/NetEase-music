@@ -1,0 +1,298 @@
+body{
+	background-color: rgb(245,245,245);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.nav {
+	height: 70px;
+	background-color: #242424;
+	display: flex;
+	cursor: pointer;
+}
+.rem{
+	cursor: pointer;
+}
+
+.nav>div {
+	height: 70px;
+}
+
+.text {
+	text-align: center;
+	line-height: 70px;
+	overflow: hidden;
+}
+
+.rem {
+	height: 37px;
+	background-color: rgb(194, 12, 12);
+	display: flex;
+}
+
+.rem>div {
+	height: 37px;
+}
+.content{
+	width: 980px;
+	height: 3331px;
+	margin: 0 auto;
+	border: 1px solid rgb(211,211,211);
+	background-color: white;
+}
+.con01{
+	width: 900px;
+	height: 194px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+.con01-boxes{
+	width: 900px;
+	height: 194px;
+}
+.con02{
+	width: 900px;
+	height: 643px;
+	margin: 0 auto;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.con02-left{
+	width: 426px;
+	height: 643px;
+}
+.con02-right{
+	width: 426px;
+	height: 643px;
+}
+.con02-ban{
+	width: 426px;
+	height: 40px;
+	border-bottom: 2px solid rgb(194,12,12);
+}
+.con02-con{
+	width: 424px;
+	height: 601px;
+	border: 1px solid rgb(211,211,211);
+}
+.con03{
+	width: 900px;
+	height: 364px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+.con03-title{
+	width: 900px;
+	height: 40px;
+	border-bottom: 2px solid rgb(194,12,12);
+}
+.icon{
+	width: 48px;
+	height: 48px;
+	margin: 2px auto 0;
+	background-position: 0 0;
+}
+a{
+	cursor: pointer;
+	display: block;
+	width: 70px;
+	height: 70px;
+	font-size: 12px;
+	font-family: "arial, helvetica, sans-serif";
+	text-align: center;
+	text-decoration: none;
+	color: rgb(136,136,136);
+}
+
+.flags{
+	list-style-type: none;
+	display: flex;
+	
+	flex-wrap: wrap;
+}
+.flags > li{
+	display: block;
+	margin-top: 20px;
+	padding-right: 30px;
+	display: list-item;
+}
+.con02-h3{
+	display: flex;
+	justify-content: space-between;
+}
+.more{
+	align-items: auto;
+}
+.li{
+	width:643px;
+	height: 300px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.li > div{
+	width: 300px;
+	height: 100px;
+}
+
+
+li{
+	list-style: none;
+}
+.f-thide {
+	width: 300px;
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+}
+.itm{		
+	display: flex;
+	width: 424px;
+	height: 40px;
+	padding: 10px 0;
+	line-height: 25px;
+}
+.f-fl {
+	float: left;
+}
+.u-type {
+	display: inline-block;
+	position: relative;
+	top: 14px;
+	height: 16px;
+	overflow: hidden;
+	padding: 0 6px;
+	border: 1px solid #999;
+	line-height: 16px;
+	*line-height: 18px;
+	color: #999;
+	vertical-align: middle;
+	font-size: 12px;
+}
+.rank {
+	width: 47px;
+	margin: 6px 0 0 0;
+	text-align: center;
+	line-height: normal;
+}
+.red {
+	color: #da4545;
+}
+.u-rnk i {
+	margin: -1px 2px 0 0;
+	*margin-top: 0;
+	_margin-top: 1px;
+	vertical-align: middle;
+}
+.u-rnk-up {
+	color: #ba2226;
+}
+.u-rnk {
+	line-height: normal;
+	font-size: 10px;
+}
+.cn{
+	margin-left: 200px;
+}
+.u-cover-rdi {
+	width: 120px;
+	height: 120px;
+}
+.rdilist {
+	margin-left: -30px;
+}
+.con03-img{
+	width: 900px;
+	height: 400px;
+}
+.con03-ul{
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 930px;
+	height: 322px;
+	justify-content: space-between;
+}
+.con03-img{
+	width: 120px;
+	height: 120px;
+}
+.con03-li{
+	width: 435px;
+	height: 161px;
+	display: flex;
+}
+.li-name{
+	margin-left:20px; 
+}
+.li-h3{
+	cursor: pointer;
+	margin-top: 20px;
+}
+.li-p{
+	font-size: 10px;
+	color: rgb(136,136,136);
+}
+.con03-li-b{
+	border-bottom: 2px solid rgb(245,245,245);
+}
+.m-srch .srch{
+	padding-left: 10px;
+	height: 32px;
+	width: 158px;
+	margin-top: 19px;
+	background-color: #fff;
+	border-radius: 32px;
+}
+.m-srch{
+	float: right;
+	width: 158px;
+	height: 32px;
+}
+.srch-in{
+	margin: 8px 0 0 0;
+	height: 16px;
+	width: 121.6px;
+	outline:medium;
+	border: 1px;
+}
+.srch-in:focus{
+	border:0px solid red;
+}
+input{
+	line-height: 16px;
+}
+.s-img{
+	padding-top: 5px;
+	height: 22px;
+	width: 23px;
+}
+.srch-span{
+	display: flex;
+}
+.chuang{
+	color: rgb(204,204,204);
+	font-size: 12px;
+	float: right;
+	width: 90px;
+	height: 32px;
+	margin: 19px 0 0 18px;
+	box-sizing: border-box;
+	padding-left: 16px;
+	border: 1px solid #4F4F4F;
+	background-position: 0 -140px;
+	line-height: 33px;
+	color: #ccc;
+	border-radius: 20px;
+}
+.login{
+	margin: 27px 0 0 12px;
+	color: rgb(204,204,204);
+	font-size: 13px;
+				}

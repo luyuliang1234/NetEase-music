@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>主播电台-网易云音乐</title>
+		<link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
+		<link rel="stylesheet" type="text/css" href="./css/主播电台.css" />
+		<link rel="stylesheet" type="text/css" href="./css/player.css">
+		<script type="text/javascript">
+			window.onload = function(){
+				var input = document.getElementById("srch-input");
+				input.onchange = function(){
+					console.log(input.value)
+					var input_c = input.value
+					var url = "https://music.163.com/#/search/m/?s="+input_c+"&type=1";
+					window.location.href = url;
+				}
+			}
+			function changeColorO(c){
+				c.style.border = '1px solid rgb(255,255,255)'
+				c.style.color = 'rgb(255,255,255)'	
+			}
+			function changeColorB(c){
+				c.style.border = '1px solid #4F4F4F'
+				c.style.color = 'rgb(204,204,204)'
+			}
+		</script>
+		</head>
+	<body>
+		<div class="nav">
+			<div class="首页" onclick="window.location.href= 'index.html';return false" style="width: 25%;"><img
+					style="height: 70px;width: 100%;" src="img/网易.jpg"></div>
+			<div class="text" onclick="window.location.href= 'index.html';return false" style="color:white;width:10%">发现音乐
+			</div>
+			<div class="text" onclick="window.location.href= '我的音乐.html';return false" style="color:white;width:10%">我的音乐
+			</div>
+			<div class="text" onclick="window.location.href= '朋友.html';return false" style="color:white;width:6%">朋友</div>
+			<div class="text" onclick="window.open('https://music.163.com/store/product')" style="color:white;width:6%">商城
+			</div>
+			<div class="text" onclick="window.open('https://music.163.com/st/musician')" style="color:white;width:9%">音乐人
+			</div>
+			<div class="text" onclick="window.open('下载.html')" style="color:white;width:7%">下载客户端</div>
+			<div class="m-srch">
+				<div class="srch" >
+					<span class="srch-span">
+						<img class="s-img" src="img/搜索.png"  />
+						<input type="text"  class="srch-in" id="srch-input"  placeholder="音乐/视频/电台/用户" />
+					</span>
+				</div>
+			</div>
+			<a onmousemove="changeColorO(this)" onmouseleave="changeColorB(this)" class="chuang" href="https://music.163.com/login?targetUrl=%2Fcreatorcenter">创作者中心</a>
+			<a class="login" href="https://music.163.com/#/login">登录</a>
+		</div>
+		<div class="rem">
+			<div onclick="window.location.href= 'index.html';return false"
+				style="font-size: 10px;width: 30%;line-height:37px;overflow:hidden;text-align: right;color: white;">推荐
+			</div>
+			<div onclick="window.open('排行榜.html','_self')"
+				style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">排行榜
+			</div>
+			<div onclick="window.open('歌单.html','_self')"
+				style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌单
+			</div>
+			<div onclick="window.open('主播电台.html','_self')"
+				style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">主播电台
+			</div>
+			<div onclick="window.open('歌手.html','_self')"
+				style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌手
+			</div>
+			<div onclick="window.open('新碟上架.html','_self')"
+				style="font-size: 10px;width: 37%;line-height:37px;overflow:hidden;text-align: left;color: white;">新歌上架
+			</div>
+		</div>
+		<div class="content">
+			<div class="con01">
+				<div class="con01-boxes">
+					<div class="son01-flags">
+						<ul class="flags">
+							<li><a class="tags" href="https://music.163.com/discover/djradio/category?id=3">
+								<div class="icon" style="background-image:url(https://p4.music.126.net/icULXvfqWJMFvcjTrXSLeA==/109951165406422565.jpg);"></div>
+								<em>情感调频</em>
+							</a></li>
+							
+							<li><a class="tags" href="/discover/djradio/category?id=2">
+								<div class="icon" style="background-image:url(https://p4.music.126.net/fWonYYR8sORR2mEKZfYqjQ==/109951165406418703.jpg);"></div>
+								<em>音乐故事</em>
+							</a></li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=3001">
+							<div class="icon" style="background-image:url(https://p3.music.126.net/pBodB8v8tbQxsoC1UCZfEw==/109951165406412456.jpg);"></div>
+							<em>声音恋人</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=2001">
+							<div class="icon" style="background-image:url(https://p3.music.126.net/GqeTI3A_g4FFzm_4MoNSsQ==/109951165406411412.jpg);"></div>
+							<em>创作翻唱</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=10001">
+							<div class="icon" style="background-image:url(https://p3.music.126.net/nEQJH0QRoLbcHho11tsQrw==/109951165406409464.jpg);"></div>
+							<em>声之剧场</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=8">
+							<div class="icon" style="background-image:url(https://p4.music.126.net/LIkzDiW_ktaSbk_s6MgMkg==/109951165406441809.jpg);"></div>
+							<em>脱口秀</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=5">
+							<div class="icon" style="background-image:url(https://p3.music.126.net/DzeP-S6FMZYzjwppwY3-Jw==/109951165406417278.jpg);"></div>
+							<em>侃侃而谈</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=10002">
+							<div class="icon" style="background-image:url(https://p4.music.126.net/3qyLawhgmTyHNabhuaKYTg==/109951165406422635.jpg);"></div>
+							<em>电音趴</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=6">
+							<div class="icon" style="background-image:url(https://p4.music.126.net/RgtBB0IPWuzAK5KMKEFCgg==/109951165406425027.jpg);"></div>
+							<em>助眠解压</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=14">
+							<div class="icon" style="background-image:url(https://p4.music.126.net/VrBtcrNXRb6lIogyGLtfkQ==/109951165406414913.jpg);"></div>
+							<em>你好爱豆</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=13">
+							<div class="icon" style="background-image:url(https://p4.music.126.net/CPvQ2tG9oV1FngMOYyyziA==/109951165406424089.jpg);"></div>
+							<em>铃声</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="/discover/djradio/category?id=11">
+							<div class="icon" style="background-image:url(https://p3.music.126.net/ULDTiR13aSOEzB3RBh7NdQ==/109951165406416867.jpg);"></div>
+							<em>其他</em>
+							</a>
+							</li>
+							
+							<li>
+							<a href="#/topic?id=18652232" target="_blank">
+							<div class="icon" style="background-image:url(https://music.163.com/style/web2/img/index_radio/radio_faq.png);"></div>
+							<em>常见问题</em>
+							</a>
+							</li>
+							
+							<li class="apply">
+							<a id="j-djradio-entry" href="javascript:;" onclick="top.login()">
+							<div class="icon" style="background-image:url(https://music.163.com//style/web2/img/index_radio/radio_apply.png);"></div>
+							<em><font color="#5CB6E7">我要做主播</font></em>
+							</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="con02">
+				<div class="con02-left">
+					<div class="con02-ban">
+						<h3 class="con02-h3"><font size="5">推荐节目</font> <a href="/discover/djradio/recommend" class="more">更多 &gt;</a></h3>
+					</div>
+					<div class="con02-con">
+						<ul>
+							<li class="itm">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/6h_JSQ084gTCB_yezSD-VA==/109951165549810291.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071120909" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071120909" class="s-fc1 f-fw0" title="《贫民窟的百万富翁》：上综艺赢千万？不是人人都配得上一夜暴富">《贫民窟的百万富翁》：上综艺赢千万？不是人人都配得上一夜暴富</a></h3>
+								<p class="f-thide"><a href="/djradio?id=795897780" class="s-fc4" title="毒舌电影">毒舌电影</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=5" class="tag u-type">侃侃而谈</a>
+							</li>
+							<li class="itm bg">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/tHEW9uDdeklKqGYipfictA==/109951165548246879.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071095269" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071095269" class="s-fc1 f-fw0" title="我们都有病">我们都有病</a></h3>
+								<p class="f-thide"><a href="/djradio?id=644019" class="s-fc4" title="陪你听一首歌">陪你听一首歌</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=2" class="tag u-type">音乐故事</a>
+							</li>
+							<li class="itm ">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/TpkXT-KSk8mmVdEfYqKjbQ==/109951165547534601.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071067241" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071067241" class="s-fc1 f-fw0" title="你的答案">你的答案</a></h3>
+								<p class="f-thide"><a href="/djradio?id=792178495" class="s-fc4" title="Ada的烟嗓音乐电台">Ada的烟嗓音乐电台</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=2001" class="tag u-type">创作翻唱</a>
+							</li>
+							<li class="itm bg">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p1.music.126.net/-erGQYTK4F4xBQDBf8PpRw==/109951165546312204.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071081140" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071081140" class="s-fc1 f-fw0" title="到底谁操纵了谁？(嘉宾：钟嘉诚x龚子棋)">到底谁操纵了谁？(嘉宾：钟嘉诚x龚子棋)</a></h3>
+								<p class="f-thide"><a href="/djradio?id=184" class="s-fc4" title="子彦音乐时间">子彦音乐时间</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=2" class="tag u-type">音乐故事</a>
+							</li>
+							<li class="itm ">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p1.music.126.net/_Pj4yZ9XYXvwI4VoY9zWlA==/109951165548202104.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071097284" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071097284" class="s-fc1 f-fw0" title="FEMS 52 | [概念] 异域风情-Exotic Electronica">FEMS 52 | [概念] 异域风情-Exotic Electronica</a></h3>
+								<p class="f-thide"><a href="/djradio?id=527487600" class="s-fc4" title="FEMS - 放刺混音带">FEMS - 放刺混音带</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=10002" class="tag u-type">电音趴</a>
+							</li>
+							<li class="itm bg">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p1.music.126.net/eXg_-asbRkUruDQMVYrmWQ==/109951165547078091.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071082112" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071082112" class="s-fc1 f-fw0" title="听｜摸鱼声 古今请假简史 教你Flag如何即立即倒">听｜摸鱼声 古今请假简史 教你Flag如何即立即倒</a></h3>
+								<p class="f-thide"><a href="/djradio?id=796345937" class="s-fc4" title="跟我走 | CATCH UP">跟我走 | CATCH UP</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=5" class="tag u-type">侃侃而谈</a>
+							</li>
+							<li class="itm ">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p1.music.126.net/3nEVdyal9ubWrSIrb5Bt4Q==/109951165543864828.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071036031" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071036031" class="s-fc1 f-fw0" title="24.约翰列侬逝世40周年-你所不知道的列侬">24.约翰列侬逝世40周年-你所不知道的列侬</a></h3>
+								<p class="f-thide"><a href="/djradio?id=259002" class="s-fc4" title="WALKIE TALKIE音乐对讲机">WALKIE TALKIE音乐对讲机</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=2" class="tag u-type">音乐故事</a>
+							</li>
+							<li class="itm bg">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p1.music.126.net/HxpkoYX4Bvwqy_Fju2SPpg==/109951165542591379.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071023000" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071023000" class="s-fc1 f-fw0" title="LadyHit 女脱（1） “一张膜” 就决定了女人的价值吗?">LadyHit 女脱（1） “一张膜” 就决定了女人的价值吗?</a></h3>
+								<p class="f-thide"><a href="/djradio?id=792997505" class="s-fc4" title="能力有限电台">能力有限电台</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=5" class="tag u-type">侃侃而谈</a>
+							</li>
+							<li class="itm ">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p1.music.126.net/gMU6TD00WULBcgFV--oDVA==/109951165541217052.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2070997675" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2070997675" class="s-fc1 f-fw0" title="徐疏雨创作DEMO大公开 Vol.1-《红色金鱼》原来编了十多个版本！">徐疏雨创作DEMO大公开 Vol.1-《红色金鱼》原来编了十多个版本！</a></h3>
+								<p class="f-thide"><a href="/djradio?id=794652664" class="s-fc4" title="徐疏雨 | 金鱼电台">徐疏雨 | 金鱼电台</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=2" class="tag u-type">音乐故事</a>
+							</li>
+							<li class="itm bg">
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p1.music.126.net/ZFp8bdr_9zTe2KBLtI7sag==/109951165541207409.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071002752" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071002752" class="s-fc1 f-fw0" title="【裘德专访】：缺席、勇气、孤独、颁奖礼、巡演">【裘德专访】：缺席、勇气、孤独、颁奖礼、巡演</a></h3>
+								<p class="f-thide"><a href="/djradio?id=23" class="s-fc4" title="【另一角落】：幻想曲">【另一角落】：幻想曲</a></p>
+								</div>
+								<a href="/discover/djradio/category?id=2" class="tag u-type">音乐故事</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="con02-right">
+					<div class="con02-ban">
+						<h3 class="con02-h3"><font size="5">节目排行榜</font> <a href="/discover/djradio/recommend" class="more">更多 &gt;</a></h3>
+					</div>
+					<div class="con02-con">
+						<ul>
+							<li class="itm">
+								<div class="rank s-fc4 f-fl">
+								<em class="red f-fs1">01</em>
+								
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/vZrC8l4Z346W_IFpvlQF5Q==/109951165500300672.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2070689339" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2070689339" class="s-fc1 f-fw0" title="茫">茫</a></h3>
+								<p class="f-thide"><a href="/djradio?id=527670628" class="s-fc4" title="网瘾少女叽">网瘾少女叽</a></p>
+								</div>
+								<span class="hot u-hot f-fl"><i style="width:92%"><i></i></i></span>
+							</li>
+							<li class="itm">
+								<div class="rank s-fc4 f-fl">
+								<em class="red f-fs1">02</em>
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/ffflxz7tYAGXZpkmQDR7WQ==/109951165542492074.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071042877" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071042877" class="s-fc1 f-fw0" title="把普通的ri子过得浪漫些 我的意思是和你">把普通的ri子过得浪漫些 我的意思是和你</a></h3>
+								<p class="f-thide"><a href="/djradio?id=792129517" class="s-fc4" title="云边有个小卖铺☁️">云边有个小卖铺☁️</a></p>
+								</div>
+							</li>
+							<li class="itm ">
+								<div class="rank s-fc4 f-fl">
+								<em class="red f-fs1">03</em>
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/q6-BCELWuALT42bCUJEl8w==/18602637232548268.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2057622739" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2057622739" class="s-fc1 f-fw0" title="又見">又見</a></h3>
+								<p class="f-thide"><a href="/djradio?id=792048424" class="s-fc4" title="该快乐了吧">该快乐了吧</a></p>
+								</div>
+								<span class="hot u-hot f-fl"><i style="width:58.0126566388%"><i></i></i></span>
+							</li>
+							<li class="itm bg">
+								<div class="rank s-fc4 f-fl">
+								<em class="f-fs1">04</em>
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/W3wcwndNqe6h0CK46cLxig==/109951165549673645.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071127896" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071127896" class="s-fc1 f-fw0" title="“忘记一个人是从声音开始的”">“忘记一个人是从声音开始的”</a></h3>
+								<p class="f-thide"><a href="/djradio?id=792733554" class="s-fc4" title="柔情少女社">柔情少女社</a></p>
+								</div>
+								<span class="hot u-hot f-fl"><i style="width:56.2395457197%"><i></i></i></span>
+							</li>
+							<li class="itm ">
+								<div class="rank s-fc4 f-fl">
+								<em class="f-fs1">05</em>
+								
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/Z7hUqfXNQyNF0CXB2K9ZSA==/109951165524802150.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2070942974" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2070942974" class="s-fc1 f-fw0" title="学不会">学不会</a></h3>
+								<p class="f-thide"><a href="/djradio?id=791693381" class="s-fc4" title="王灿的电台">王灿的电台</a></p>
+								</div>
+								<span class="hot u-hot f-fl"><i style="width:35.123221314%"><i></i></i></span>
+							</li>
+							<li class="itm bg">
+								<div class="rank s-fc4 f-fl">
+								<em class="f-fs1">06</em>
+								
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/e4bE-rHVkKj_sYTJR0dPCA==/109951165548901285.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2071090437" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2071090437" class="s-fc1 f-fw0" title="Vicetone - 2020 End of the Year Mix">Vicetone - 2020 End of the Year Mix</a></h3>
+								<p class="f-thide"><a href="/djradio?id=796338775" class="s-fc4" title="Vicetone - End of the Year Mix">Vicetone - End of the Year Mix</a></p>
+								</div>
+								<span class="hot u-hot f-fl"><i style="width:32.3969783567%"><i></i></i></span>
+							</li>
+							<li class="itm ">
+								<div class="rank s-fc4 f-fl">
+								<em class="f-fs1">07</em>
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/qG9blWTnSZw17wiIwvFrBA==/109951165335227057.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2069526244" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2069526244" class="s-fc1 f-fw0" title="云泥">云泥</a></h3>
+								<p class="f-thide"><a href="/djradio?id=795119663" class="s-fc4" title="枝芽">枝芽</a></p>
+								</div>
+								<span class="hot u-hot f-fl"><i style="width:27.7590365004%"><i></i></i></span>
+							</li>
+							<li class="itm bg">
+								<div class="rank s-fc4 f-fl">
+								<em class="f-fs1">08</em>
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/DiwgK2ZSNdHAAcN0wpQNkA==/109951163733240629.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2058464308" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2058464308" class="s-fc1 f-fw0" title="Hillsong Y&amp;F - Wake(Back Up)">Hillsong Y&amp;F - Wake(Back Up)</a></h3>
+								<p class="f-thide"><a href="/djradio?id=7351119" class="s-fc4" title="ZERO_CHEN的电台">ZERO_CHEN的电台</a></p>
+								</div>
+								<span class="hot u-hot f-fl"><i style="width:26.8840300392%"><i></i></i></span>
+							</li>
+								<li class="itm ">
+								<div class="rank s-fc4 f-fl">
+								<em class="f-fs1">09</em>
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/yyg24lfxXj0rnWdoW4mIsQ==/109951163798403845.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2059053093" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2059053093" class="s-fc1 f-fw0" title="万妮达 - forU.（侵删）">万妮达 - forU.（侵删）</a></h3>
+								<p class="f-thide"><a href="/djradio?id=792616377" class="s-fc4" title="像万妮达一样酷可以吗？">像万妮达一样酷可以吗？</a></p>
+								</div>
+								<span class="hot u-hot f-fl"><i style="width:25.1951588726%"><i></i></i></span>
+							</li>
+							<li class="itm bg">
+								<div class="rank s-fc4 f-fl">
+								<em class="f-fs1">10</em>
+								</div>
+								<a class="cvr u-cover u-cover-tiny f-fl" title="播放">
+								<img src="http://p2.music.126.net/BqHM3hlDz3uZvCDs9ZlCPQ==/109951164082360408.jpg?param=40x40" alt="">
+								<i data-res-type="17" data-res-id="2070120236" data-res-action="play" class="ply f-pa f-dn f-alpha"></i>
+								</a>
+								<div class="cnt f-fl">
+								<h3 class="f-thide"><a href="/program?id=2070120236" class="s-fc1 f-fw0" title="《怎么唱情歌》王巨星 （原唱 刘惜君）">《怎么唱情歌》王巨星 （原唱 刘惜君）</a></h3>
+								<p class="f-thide"><a href="/djradio?id=793242384" class="s-fc4" title="王巨星的电台">王巨星的电台</a></p>
+								</div>
+								<span class="hot u-hot f-fl"><i style="width:25.1095604144%"><i></i></i></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="con03">
+				<div class="con03-title">
+					<h3 class="con02-h3">
+						<font size="5">音乐故事·电台</font> <a href="/discover/djradio/recommend" class="more">更多 &gt;</a>
+					</h3>
+				</div>
+				<ul class="con03-ul">
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/#/djradio?id=526569576">
+						<img class="con03-img" src="http://p2.music.126.net/4MrNSHXMVObh_P76dJDZUA==/109951164253091176.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=526569576'">
+								晓苏•解忧唱片行
+							</h3>
+							<br />
+							<p class="li-p">音乐是我的解药，也是你的良药</p>
+						</div>
+					</li>
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=45">
+						<img class="con03-img" src="http://p2.music.126.net/eBuMB-MgVkyMFJilQOFCIQ==/19018252625984248.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=526569576'">
+								嘎电台
+							</h3>
+							<br />
+							<p class="li-p">宁静嘎嘎的音乐态度</p>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=193004">
+						<img class="con03-img" src="http://p2.music.126.net/19rnf87CaR1kYqS8Hlg31A==/109951163114268603.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=193004'">
+								李峙的不老歌
+							</h3>
+							<br />
+							<p class="li-p">听听老歌，好好生活</p>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=34">
+						<img class="con03-img" src="http://p2.music.126.net/bcUg3xdpJPJehq9fqfQedw==/109951164910880251.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=34'">
+								在云端
+							</h3>
+							<br />
+							<p class="li-p">林海私人分享，品质音乐推荐</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="con03">
+				<div class="con03-title">
+					<h3 class="con02-h3"><font size="5">助眠解压·电台</font> <a href="/discover/djradio/recommend" class="more">更多 &gt;</a></h3>
+				</div>
+				<ul class="con03-ul">
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/#/djradio?id=526569576">
+						<img class="con03-img" src="http://p2.music.126.net/dPZdc37ZPJ2Cfwbtzp_ttg==/109951165383284732.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=795145981'">
+								轻松 · 冥想情绪包
+							</h3>
+							<br />
+							<p class="li-p">跟陈鸿宇一起，让奔忙心停下来</p>
+						</div>
+					</li>
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=794273495">
+						<img class="con03-img" src="http://p2.music.126.net/sbaFWjS3u_39XS617qAicw==/109951164485848375.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=794273495'">
+								白噪音奇境之旅，梦中环游大自然
+							</h3>
+							<br />
+							<p class="li-p">精选自然音，放松心情，缓解压力</p>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=793385506">
+						<img class="con03-img" src="http://p1.music.126.net/Z-KNl3QOi8_IyTfrXN1V6A==/109951164174689863.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=793385506'">
+								Now畅谈
+							</h3>
+							<br />
+							<p class="li-p">用冥想智慧 解读习以为常的世界</p>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=335503053">
+						<img class="con03-img" src="http://p1.music.126.net/eA1NJP6xerH5xdraWMxr_A==/18525671418262640.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=335503053'">
+								【学习BGM】在霍格沃茨读书是什么样的体验
+							</h3>
+							<br />
+							<p class="li-p">争当学霸，向格兰杰小姐学习</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="con03">
+				<div class="con03-title">
+					<h3 class="con02-h3"><font size="5">侃侃而谈·电台</font> <a href="/discover/djradio/recommend" class="more">更多 &gt;</a></h3>
+				</div>
+				
+				<ul class="con03-ul">
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=796240441">
+						<img class="con03-img" src="http://p1.music.126.net/nAY769UGD4JCgw7CC-AVog==/109951165538797583.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=796240441'">
+								草率电台
+							</h3>
+							<br />
+							<p class="li-p">一起和大家草率的聊点实话</p>
+						</div>
+					</li>
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=796274642">
+						<img class="con03-img" src="http://p1.music.126.net/hcpjMyq9-T_mQSP7CjqUpQ==/109951165540191215.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=796274642'">
+								塔可冲司机
+							</h3>
+							<br />
+							<p class="li-p">一群勇敢的人，试图说一些故事和观点</p>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=794399435">
+						<img class="con03-img" src="http://p1.music.126.net/TsMOvksN_3tU8SKAEzjTgQ==/109951164996974381.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=794399435'">
+								2082FM
+							</h3>
+							<br />
+							<p class="li-p">四个不同时期的沙龙型闲谈播客</p>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=795717427">
+						<img class="con03-img" src="http://p1.music.126.net/1r1T-4jTA5WwKKYAhtkemQ==/109951165496193730.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=795717427'">
+								想·聊天 Think Talk
+							</h3>
+							<br />
+							<p class="li-p">跟爱想、会聊天的你，来场灵魂相遇</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="con03">
+				<div class="con03-title">
+					<h3 class="con02-h3"><font size="5">情感调频·电台</font> <a href="/discover/djradio/recommend" class="more ">更多 &gt;</a></h3>
+				</div>
+				<ul class="con03-ul">
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=349957829">
+						<img class="con03-img" src="http://p1.music.126.net/uKk2VRweMJtlvTePCfrS5g==/18919296579351550.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=349957829'">
+								话不多电台
+							</h3>
+						</div>
+					</li>
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=792248463">
+						<img class="con03-img" src="http://p1.music.126.net/hIHlmqwtvbFdUpcBNKqT8g==/109951164973977874.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=792248463'">
+								【林一电台】
+							</h3>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=794671584">
+						<img class="con03-img" src="http://p1.music.126.net/zArZbgXW3ToJMMebPYcpYw==/109951164922652639.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=794671584'">
+								鼓的奶特
+							</h3>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=794739586">
+						<img class="con03-img" src="http://p1.music.126.net/ALj-4PUpGQ9ObGxDsQ6z9g==/109951164968335414.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=794739586'">
+								亲密之旅·亲电台
+							</h3>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="con03">
+				<div class="con03-title">
+					<h3 class="con02-h3"><font size="5">创作翻唱·电台</font> <a href="/discover/djradio/recommend" class="more">更多 &gt;</a></h3>
+				</div>
+				<ul class="con03-ul">
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=349993265">
+						<img class="con03-img" src="http://p1.music.126.net/fkJXiLseaFggJcvW1o3Scg==/109951163401578261.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=349993265'">
+								HHW.
+							</h3>
+							<br />
+							<p class="li-p">原创歌手的温柔翻唱后花园</p>
+						</div>
+					</li>
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=342692056">
+						<img class="con03-img" src="http://p1.music.126.net/e4_PlRduAs9sbl3Hr4yKRg==/18759867394742307.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=342692056'">
+								齐申璋翻唱集
+							</h3>
+							<br />
+							<p class="li-p">深情男嗓，拥抱你的不快乐</p>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=794846520">
+						<img class="con03-img" src="http://p1.music.126.net/_99WG044O079iaJfU0H87Q==/109951165069431959.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=794846520'">
+								聆听（亦轩）
+							</h3>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=794939390">
+						<img class="con03-img" src="http://p1.music.126.net/fv1xw0rTXSR768B_41yVvw==/109951165220325669.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=794939390'">
+								你这么爱听音乐，来一杯网愈云吧，Don't live hard
+							</h3>
+							<br />
+							<p class="li-p">吉他指弹，一位听歌爱好者，治愈</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="con03">
+				<div class="con03-title">
+					<h3 class="con02-h3"><font size="5">其他·电台</font> <a href="/discover/djradio/recommend" class="more">更多 &gt;</a></h3>
+				</div>
+				<ul class="con03-ul">
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=794067583">
+						<img class="con03-img" src="http://p1.music.126.net/UzxkTKKZzQGJKQRgmYJeHQ==/109951165303420932.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=794067583'">
+								谜醉韩语
+							</h3>
+							<br />
+							<p class="li-p">用最简单的方式带你走进韩语世界</p>
+						</div>
+					</li>
+					<li class="con03-li con03-li-b">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=527519597">
+						<img class="con03-img" src="http://p1.music.126.net/zWsEuCErUJxjUO-izbKemw==/109951165151791026.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=527519597'">
+								浅夜动漫
+							</h3>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=527063616">
+						<img class="con03-img" src="http://p1.music.126.net/NtvJIB2yJCIrRKmb-bOqOw==/109951165494216319.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=527063616'">
+								郭德纲柳活儿
+							</h3>
+							<br />
+							<p class="li-p">郭德纲先生经典学唱曲目欢迎入坑</p>
+						</div>
+					</li>
+					<li class="con03-li">
+						<a class="con03-img"  href="https://music.163.com/djradio?id=349435875">
+						<img class="con03-img" src="http://p1.music.126.net/qGxNEIXI7FZaCGUx2RQqmg==/109951164797470916.jpg?param=200y200" alt="">
+						</a>
+						<div class="li-name">
+							<h3 class="li-h3" onclick="window.location.href='https://music.163.com/djradio?id=349435875'">
+								小学唐诗三百首
+							</h3>
+							<br />
+							<p class="li-p">每日一首诗，与你永不离！</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<div>
+			<img style="width: 100%;" src="img/最下.jpg">
+		</div>
+		<div class="footer">
+		        <div class="inner">
+		            <img src="./img/syg.bmp" alt="" id="change" style="height: 32px;">
+		            <img src="./img/bf.bmp" alt="" style="margin-left: 20px; height: 40px; width: 35px;" id="playmusic">
+		            <img src="./img/xyg.bmp" alt="" id="change2" style="margin-left: 20px;height: 32px;">
+		            <img src="" alt="" id="pic" style="height: 40px; width: 40px; border-radius: 10%; margin-left: 30px;">
+		            <div class="play">
+		                <div class="word">
+							<br />
+		                    <p id="word1">歌曲名</p>
+		                </div>
+		                <div>
+		                    <audio src="" controls="controls" class="player" id="audio"></audio>
+		                </div>
+		            </div>
+		            <label style="color:white; margin-left: 50px;">
+		                <h3><input type="checkbox" class="loop" id="loop" οnclick="loop(this)">循环播放</h3>
+		            </label>
+		
+		        </div>
+		
+		    </div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script>
+		    var audio = document.getElementById("audio");
+		    var pic = document.getElementById("pic");
+		    var word = document.getElementById("word1");
+		    var change = document.getElementById("change");
+		    var change2 = document.getElementById("change2");
+		    var playmusic = document.getElementById("playmusic");
+		    var loop = document.getElementById("loop");
+		    playmusic.onclick = function () {
+		        var tmp = playmusic.src;
+		        if (tmp.indexOf("zt.bmp") >= 0) {
+		            // 正在播放
+		            audio.pause();
+		            playmusic.src = "./img/bf.bmp";
+		        } else {
+		            // 暂停状态
+		            audio.play();
+		            playmusic.src = "./img/zt.bmp";
+		        }
+		    }
+		
+		    function getsong() {
+		
+		        $.ajax({
+		            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+		            type: "GET",
+		            dataType: "json",
+		            success: function (data) {
+		                console.log(data);
+		                pic.src = data.data.picurl;
+		                audio.src = data.data.url;
+		                word.innerText = data.data.name + " - " + data.data.artistsname;
+		                audio.load();
+		
+		            }
+		        })
+		
+		    }
+		    getsong();
+		    change.onclick = function () {
+		        playmusic.src = "./img/zt.bmp";
+		        $.ajax({
+		            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+		            type: "GET",
+		            dataType: "json",
+		            success: function (data) {
+		                console.log(data);
+		                pic.src = data.data.picurl;
+		                audio.src = data.data.url;
+		                word.innerText = data.data.name + " - " + data.data.artistsname;
+		                audio.load();
+		                audio.play();
+		            }
+		        })
+		    }
+		    change2.onclick = function () {
+		        playmusic.src = "./img/zt.bmp";
+		        $.ajax({
+		            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+		            type: "GET",
+		            dataType: "json",
+		            success: function (data) {
+		                console.log(data);
+		                pic.src = data.data.picurl;
+		                audio.src = data.data.url;
+		                word.innerText = data.data.name + " - " + data.data.artistsname;
+		
+		                audio.load();
+		                audio.play();
+		            }
+		        })
+		    }
+		    loop.onclick = function () {
+		
+		        if (loop.checked == true) {
+		
+		            audio.loop = true;
+		
+		        } else {
+		
+		            audio.loop = false;
+		
+		        }
+		
+		    }
+		
+		</script>
+				
+</body>
+</html>

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
+    <title>推荐歌手-歌手-网易云音乐</title>
+    <link rel="stylesheet" type="text/css" href="./css/player.css">
+    <style>
+        body {
+            background-color: rgb(245, 245, 245);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            height: 70px;
+            background-color: #242424;
+            display: flex;
+            cursor: pointer;
+        }
+
+        .rem {
+            cursor: pointer;
+        }
+
+        .nav>div {
+            height: 70px;
+        }
+
+        .text {
+            text-align: center;
+            line-height: 70px;
+            overflow: hidden;
+        }
+
+        .rem {
+            height: 37px;
+            background-color: rgb(194, 12, 12);
+            display: flex;
+        }
+
+        .rem>div {
+            height: 37px;
+        }
+
+        .newdisk {
+            position: relative;
+            top: 10px;
+            border: 2px solid rgb(211, 211, 211);
+            background-color: rgb(211, 211, 211);
+            height: 85%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .newdisk>div {
+            height: 110px;
+            width: 110px;
+        }
+
+        .imgcss1 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .榜单 {
+            position: relative;
+            top: 10px;
+            border: 2px solid rgb(211, 211, 211);
+            background-color: rgb(244, 244, 244);
+            height: 472px;
+            width: 689px;
+            display: flex;
+            margin-top: 20px;
+            background: url(https://s2.music.126.net/style/web2/img/index/index_bill.png?13302d5e94d2f8585862892e20d4b219) no-repeat;
+
+        }
+
+        .bang {
+            height: 100%;
+            width: 33.3333333%;
+            border: 1px solid rgb(211, 211, 211);
+            display: flex;
+        }
+
+        p,h3 {
+            cursor: pointer;
+        }
+
+        dl {
+            display: block;
+        }
+
+        .top {
+            height: 100px;
+            padding: 20px 0 0 19px;
+            display: flex;
+        }
+
+        .j-img {
+            height: 80px;
+            width: 80px;
+        }
+
+        a {
+
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        .tit {
+            float: left;
+            width: 116px;
+            margin: 6px 0 0 10px;
+        }
+
+        .f-fs1 {
+            font-size: 14px;
+        }
+
+        .s-bg {
+            font-size: 12px;
+        }
+
+        li {
+            list-style: none;
+            height: 32px;
+        }
+
+        ol {
+            height: 319px;
+            margin-left: 50px;
+            line-height: 32px;
+        }
+
+        .榜单 .no-top {
+            color: #BA2226;
+        }
+
+        ol .no {
+            float: left;
+            position: relative;
+            width: 35px;
+            height: 32px;
+            margin-left: -35px;
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .nm {
+            float: left;
+            width: 170px;
+            height: 32px;
+            font-size: 12px;
+        }
+
+        .top-2 {
+            padding-left: 25px;
+        }
+
+        .top-3 {
+            padding-left: 24px;
+        }
+
+        .v-hd3 {
+            position: relative;
+            height: 23px;
+            margin: 0 20px;
+            border-bottom: 1px solid #ccc;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .f-fl {
+            font-size: 10px;
+        }
+
+        .s-fc3 {
+            font-size: 12px;
+            color: rgb(102, 102, 102);
+            padding-left: 70px;
+        }
+
+        .itm {
+            display: flex;
+            float: left;
+            width: 210px;
+            height: 62px;
+            background: #fafafa;
+            margin: 15px 0 0 20px;
+        }
+
+        .head .j-img {
+            float: left;
+            width: 62px;
+            height: 62px;
+        }
+
+        .ifo h4 {
+            padding-left: 10px;
+            margin-top: 8px;
+        }
+
+        .ifo p {
+            padding-left: 10px;
+            width: 100%;
+        }
+
+        .n-singer {
+            height: 455px;
+            width: 247px;
+        }
+
+        .zb {
+            height: 294px;
+            width: 247px;
+        }
+
+        .f-cb {
+            width: 230px;
+            height: 250px;
+        }
+
+        .zb-h3 {
+            font-size: 12px;
+        }
+
+        .cver1 {
+            width: 40px;
+            height: 42.6px;
+        }
+
+        .cver1 .i-img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .f-cb li {
+            display: flex;
+            margin: 20px 0 0 20px;
+            height: 50px;
+            width: 210px;
+        }
+
+        .zb-xm {
+            padding-top: 5px;
+            font-size: 10px;
+            padding-left: 10px;
+        }
+
+        .zb-jj {
+            padding-top: 4px;
+            font-size: 10px;
+            padding-left: 10px;
+            color: rgb(102, 102, 102);
+        }
+
+        .m-srch .srch {
+            padding-left: 10px;
+            height: 32px;
+            width: 158px;
+            margin-top: 19px;
+            background-color: #fff;
+            border-radius: 32px;
+        }
+
+        .m-srch {
+            float: right;
+            width: 158px;
+            height: 32px;
+        }
+
+        .srch-in {
+            margin: 8px 0 0 0;
+            height: 16px;
+            width: 121.6px;
+            outline: medium;
+            border: 1px;
+        }
+
+        .srch-in:focus {
+            border: 0px solid red;
+        }
+
+        input {
+            line-height: 16px;
+        }
+
+        .s-img {
+            padding-top: 5px;
+            height: 22px;
+            width: 23px;
+        }
+
+        .srch-span {
+            display: flex;
+        }
+
+        .chuang {
+            color: rgb(204, 204, 204);
+            font-size: 12px;
+            float: right;
+            width: 90px;
+            height: 32px;
+            margin: 19px 0 0 18px;
+            box-sizing: border-box;
+            padding-left: 16px;
+            border: 1px solid #4F4F4F;
+            background-position: 0 -140px;
+            line-height: 33px;
+            color: #ccc;
+            border-radius: 20px;
+        }
+
+        .login {
+            margin: 27px 0 0 12px;
+            color: rgb(204, 204, 204);
+            font-size: 13px;
+        }
+
+        .newdisk {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .content {
+            width: 980px;
+            height: 1500px;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+            border: 1px solid rgb(211, 211, 211);
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-lift {
+            width: 18.5%;
+            height: 1500px;
+            border-right: 1px solid rgb(215, 215, 251);
+        }
+
+        .content-right {
+            width: 81.5%;
+            height: 1600px;
+        }
+
+        .content-title {
+            width: 90%;
+            height: 80px;
+            margin: 0 auto;
+            border-bottom: 2px solid rgb(194, 12, 12);
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .content-title-lift {
+            width: 90%;
+            height: 40px;
+        }
+
+        .content-title-right {
+            width: 6%;
+            height: 30px;
+        }
+
+        .content-main {
+            width: 90%;
+            height: 360px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .content-main>div {
+            width: 130px;
+            height: 130px;
+            margin-top: 20px;
+            border-bottom: 1px solid rgb(226, 226, 226);
+            border-top: 1px solid rgb(226, 226, 226);
+            border-left: 1px solid rgb(226, 226, 226);
+            border-right: 1px solid rgb(226, 226, 226);
+        }
+
+        .imgcss {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-main-img {
+            width: 100%;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .content-main-lift {
+            position: relative;
+            float: left;
+        }
+
+        .content-main-right {
+            position: relative;
+            float: right;
+        }
+
+        .singers {
+            width: 100%;
+            height: 530px;
+
+        }
+
+        .line {
+            width: 90%;
+            height: 30px;
+            border-bottom: 1px dotted rgb(153, 153, 153);
+            margin: 0 auto;
+        }
+
+        .singersimg {
+            width: 100%;
+            height: 500px;
+        }
+
+        .main {
+            width: 100%;
+            height: 1200px;
+        }
+
+        .recommend {
+            width: 80%;
+            height: 140px;
+            background-color: rgb(249, 249, 249);
+            margin: 0 auto;
+            border-bottom: 1px solid rgb(211, 211, 211);
+            position: relative;
+        }
+
+        .a {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 60px;
+        }
+
+        .area {
+            width: 80%;
+            height: 140px;
+            background-color: rgb(249, 249, 249);
+            margin: 0 auto;
+            border-bottom: 1px solid rgb(211, 211, 211);
+            position: relative;
+        }
+
+        .b {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 40px;
+        }
+
+        .other {
+            width: 80%;
+            height: 140px;
+            background-color: rgb(249, 249, 249);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .recommend-singers {
+            width: 80%;
+            height: 50%;
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="首页" onclick="window.location.href= 'index.html';return false" style="width: 25%;"><img
+                style="height: 70px;width: 100%;" src="img/网易.jpg"></div>
+        <div class="text" onclick="window.location.href= 'index.html';return false" style="color:white;width:10%">发现音乐
+        </div>
+        <div class="text" onclick="window.location.href= '我的音乐.html';return false" style="color:white;width:10%">我的音乐
+        </div>
+        <div class="text" onclick="window.location.href= '朋友.html';return false" style="color:white;width:6%">朋友</div>
+        <div class="text" onclick="window.open('https://music.163.com/store/product')" style="color:white;width:6%">商城
+        </div>
+        <div class="text" onclick="window.open('https://music.163.com/st/musician')" style="color:white;width:9%">音乐人
+        </div>
+        <div class="text" onclick="window.open('下载.html')" style="color:white;width:7%">下载客户端</div>
+        <div class="m-srch">
+            <div class="srch">
+                <span class="srch-span">
+                    <img class="s-img" src="img/搜索.png" />
+                    <input type="text" class="srch-in" id="srch-input" placeholder="音乐/视频/电台/用户" />
+                </span>
+            </div>
+        </div>
+        <a onmousemove="changeColorO(this)" onmouseleave="changeColorB(this)" class="chuang"
+            href="https://music.163.com/login?targetUrl=%2Fcreatorcenter">创作者中心</a>
+        <a class="login" href="https://music.163.com/#/login">登录</a>
+    </div>
+    <div class="rem">
+        <div onclick="window.location.href= 'index.html';return false"
+            style="font-size: 10px;width: 30%;line-height:37px;overflow:hidden;text-align: right;color: white;">推荐
+        </div>
+        <div onclick="window.open('排行榜.html','_self')"
+            style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">排行榜
+        </div>
+        <div onclick="window.open('歌单.html','_self')"
+            style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌单
+        </div>
+        <div onclick="window.open('主播电台.html','_self')"
+            style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">主播电台
+        </div>
+        <div onclick="window.open('歌手.html','_self')"
+            style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌手
+        </div>
+        <div onclick="window.open('新碟上架.html','_self')"
+            style="font-size: 10px;width: 37%;line-height:37px;overflow:hidden;text-align: left;color: white;">新歌上架
+        </div>
+    </div>
+    <div class="footer" style="z-index: 999;">
+        <div class="inner">
+            <img src="./img/syg.bmp" alt="" id="change" style="height: 32px;">
+            <img src="./img/bf.bmp" alt="" style="margin-left: 20px; height: 40px; width: 35px;" id="playmusic">
+            <img src="./img/xyg.bmp" alt="" id="change2" style="margin-left: 20px;height: 32px;">
+            <img src="" alt="" id="pic" style="height: 40px; width: 40px; border-radius: 10%; margin-left: 30px;">
+            <div class="play">
+                <div class="word">
+                    <br>
+                    <p id="word1">歌曲名</p>
+                </div>
+                <div>
+                    <audio src="" controls="controls" class="player" id="audio"></audio>
+                </div>
+            </div>
+            <label style="color:white; margin-left: 50px;">
+                <h3><input type="checkbox" class="loop" id="loop" οnclick="loop(this)">循环播放</h3>
+            </label>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-lift">
+            <div class="main">
+                <div class="recommend">
+                    <div class="a">
+                        <div>
+                            <strong>推荐</strong>
+                        </div>
+                        <div class="recommend-singers">
+                            <ul>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/"
+                                        style="color: rgb(194,12,12);font-size: 5px;">推荐歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/signed/"
+                                        style="color: rgb(51,51,51);font-size: 5px;">入驻歌手</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="b">
+                        <div>
+                            <strong>华语</strong>
+                        </div>
+                        <div class="recommend-singers">
+                            <ul>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=1001"
+                                        style="color: rgb(51,51,51);font-size: 5px;">华语男歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=1002"
+                                        style="color: rgb(51,51,51);font-size: 5px;">华语女歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=1003"
+                                        style="color: rgb(51,51,51);font-size: 5px;">华语组合/乐队</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="b">
+                        <div>
+                            <strong>欧美</strong>
+                        </div>
+                        <div class="recommend-singers">
+                            <ul>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=2001"
+                                        style="color: rgb(51,51,51);font-size: 5px;">欧美男歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=2002"
+                                        style="color: rgb(51,51,51);font-size: 5px;">欧美女歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=2003"
+                                        style="color: rgb(51,51,51);font-size: 5px;">欧美组合/乐队</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="b">
+                        <div>
+                            <strong>日本</strong>
+                        </div>
+                        <div class="recommend-singers">
+                            <ul>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=6001"
+                                        style="color: rgb(51,51,51);font-size: 5px;">日本男歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=6002"
+                                        style="color: rgb(51,51,51);font-size: 5px;">日本女歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=6003"
+                                        style="color: rgb(51,51,51);font-size: 5px;">日本组合/乐队</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="b">
+                        <div>
+                            <strong>韩国</strong>
+                        </div>
+                        <div class="recommend-singers">
+                            <ul>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=7001"
+                                        style="color: rgb(51,51,51);font-size: 5px;">韩国男歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=7002"
+                                        style="color: rgb(51,51,51);font-size: 5px;">韩国女歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=7003"
+                                        style="color: rgb(51,51,51);font-size: 5px;">韩国组合/乐队</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="other">
+                    <div class="b">
+                        <div>
+                            <strong>其他</strong>
+                        </div>
+                        <div class="recommend-singers">
+                            <ul>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=4001"
+                                        style="color: rgb(51,51,51);font-size: 5px;">其他男歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=4002"
+                                        style="color: rgb(51,51,51);font-size: 5px;">其他女歌手</a>
+                                </li>
+                                <li>
+                                    <a href="https://music.163.com/#/discover/artist/cat?id=4003"
+                                        style="color: rgb(51,51,51);font-size: 5px;">其他组合/乐队</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-right">
+            <div class="content-title">
+                <div class="content-title-lift">
+                    <h2>入驻歌手</h2>
+                </div>
+                <div class="content-title-right">
+                    <a href="https://music.163.com/#/discover/artist/signed/"
+                        style="color: rgb(102,102,102); font-size: 12px;">更多></a>
+                </div>
+            </div>
+            <div class="content-main">
+                <div>
+                    <a href="https://music.163.com/#/artist?id=10559">
+                        <img class="imgcss"
+                            src="http://p1.music.126.net/F9asgcj7C7qSl_je9XDvRw==/603631883675241.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=10559"
+                                style="color: rgb(0,0,0);font-size: 8px;">张惠妹</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=1160085">
+                        <img class="imgcss"
+                            src="http://p1.music.126.net/7BUW9dnqOMF1dn3ioKJOMg==/109951162820707114.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=1160085"
+                                style="color: rgb(0,0,0);font-size: 8px;">Fine乐团</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=5345">
+                        <img class="imgcss"
+                            src="http://p2.music.126.net/TiRAIiIihOgtBgYB6DZRXA==/109951162916034289.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=5345"
+                                style="color: rgb(0,0,0);font-size: 8px;">万晓利</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=6731">
+                        <img class="imgcss"
+                            src="http://p2.music.126.net/w_UWOls2uCkFN_U62788Xg==/18806046882229308.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=6731"
+                                style="color: rgb(0,0,0);font-size: 8px;">赵雷</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=3669">
+                        <img class="imgcss"
+                            src="http://p2.music.126.net/NDsX060FnCtiDMZN-c_9Gw==/3438172872737957.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=3669"
+                                style="color: rgb(0,0,0);font-size: 8px;">王三溥</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=166009">
+                        <img class="imgcss"
+                            src="http://p2.music.126.net/TQZGbxp-xnJla-q7ii9z0A==/1364493985498917.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=166009"
+                                style="color: rgb(0,0,0);font-size: 8px;">吴莫愁</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=3069">
+                        <img class="imgcss"
+                            src="http://p2.music.126.net/aSFrKm-igpxlvzYrdJOMPQ==/279275953476688.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=3069"
+                                style="color: rgb(0,0,0);font-size: 8px;">洪启</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=8614">
+                        <img class="imgcss"
+                            src="http://p2.music.126.net/d9xefjQIm5uWrEyalZjCkg==/109951163522346856.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=8614"
+                                style="color: rgb(0,0,0);font-size: 8px;">李霄云</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=4941">
+                        <img class="imgcss"
+                            src="http://p2.music.126.net/YOmW5GdOWA44oascVdjfUw==/280375465100304.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=4941"
+                                style="color: rgb(0,0,0);font-size: 8px;">孙楠</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=3682">
+                        <img class="imgcss"
+                            src="http://p1.music.126.net/1GIlkxKmvKu66ufU83FyvA==/31885837222663.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=3682"
+                                style="color: rgb(0,0,0);font-size: 8px;">老狼</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+            </div>
+            <div class="content-title">
+                <div class="content-title-lift">
+                    <h2>热门歌手</h2>
+                </div>
+                <div class="content-title-right">
+                    <h5></h5>
+                </div>
+            </div>
+            <div class="content-main">
+                <div>
+                    <a href="https://music.163.com/#/artist?id=5781">
+                        <img class="imgcss"
+                            src="https://p1.music.126.net/1tSJODTpcbZvNTCdsn4RYA==/109951165034950656.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=5781"
+                                style="color: rgb(0,0,0);font-size: 8px;">薛之谦</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=31165848">
+                        <img class="imgcss"
+                            src="https://p2.music.126.net/-vAAAt4wZ8bAJCkilZVbcQ==/109951163780408942.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=31165848"
+                                style="color: rgb(0,0,0);font-size: 8px;">刘大壮</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=3684">
+                        <img class="imgcss"
+                            src="https://p2.music.126.net/-nXVAQB1nsLgBwyJEuwcZQ==/109951165400835887.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=3684"
+                                style="color: rgb(0,0,0);font-size: 8px;">林俊杰</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=2116">
+                        <img class="imgcss"
+                            src="https://p2.music.126.net/_d1scu7z_1dmd0Zgv9mTLA==/19165587183900212.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=2116"
+                                style="color: rgb(0,0,0);font-size: 8px;">陈奕迅</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=12429072">
+                        <img class="imgcss"
+                            src="https://p2.music.126.net/Xl0WENt4F6wsgjjjQWuQsw==/109951164232034479.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=12429072"
+                                style="color: rgb(0,0,0);font-size: 8px;">隔壁老樊</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=12929031">
+                        <img class="imgcss"
+                            src="https://p2.music.126.net/nGgRhE2P0L4Co3t5JyXsXQ==/109951165474160706.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=12929031"
+                                style="color: rgb(0,0,0);font-size: 8px;">李润祺</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=5771">
+                        <img class="imgcss"
+                            src="https://p1.music.126.net/ATZ8-mOxophKXrLC0iXMZw==/109951163536269820.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=5771"
+                                style="color: rgb(0,0,0);font-size: 8px;">许嵩</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=861777">
+                        <img class="imgcss"
+                            src="https://p1.music.126.net/eiazGAbIGMBF-Q9lInm5xw==/109951164158509628.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=861777"
+                                style="color: rgb(0,0,0);font-size: 8px;">华晨宇</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=12138269">
+                        <img class="imgcss"
+                            src="https://p1.music.126.net/ZXX_c7YiEcNp5HVQWa-y6A==/109951164528322889.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=12138269"
+                                style="color: rgb(0,0,0);font-size: 8px;">毛不易</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+                <div>
+                    <a href="https://music.163.com/#/artist?id=14312549">
+                        <img class="imgcss"
+                            src="https://p2.music.126.net/daN7qav1x0nWl-TZRe41dw==/109951163303423969.jpg?param=130y130">
+                    </a>
+                    <div class="content-main-img">
+                        <div class="content-main-lift">
+                            <a href="https://music.163.com/#/artist?id=14312549"
+                                style="color: rgb(0,0,0);font-size: 8px;">王贰浪</a>
+                        </div>
+                        <img class="content-main-lift" src="./img/歌手个人.png">
+                    </div>
+                </div>
+            </div>
+            <div class="singers">
+                <div class="line"></div>
+                <div>
+                    <img class="singersimg" src="./img/歌手.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img style="width: 100%;" src="img/最下.jpg">
+    </div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    window.onload = function () {
+        var input = document.getElementById("srch-input");
+        input.onchange = function () {
+            console.log(input.value)
+            var input_c = input.value
+            var url = "https://music.163.com/#/search/m/?s=" + input_c + "&type=1";
+            window.location.href = url;
+        }
+    }
+    function changeColorO(c) {
+        c.style.border = '1px solid rgb(255,255,255)'
+        c.style.color = 'rgb(255,255,255)'
+    }
+    function changeColorB(c) {
+        c.style.border = '1px solid #4F4F4F'
+        c.style.color = 'rgb(204,204,204)'
+    }
+
+    var audio = document.getElementById("audio");
+    var pic = document.getElementById("pic");
+    var word = document.getElementById("word1");
+    var change = document.getElementById("change");
+    var change2 = document.getElementById("change2");
+    var playmusic = document.getElementById("playmusic");
+    var loop = document.getElementById("loop");
+    playmusic.onclick = function () {
+        var tmp = playmusic.src;
+        if (tmp.indexOf("zt.bmp") >= 0) {
+            // 正在播放
+            audio.pause();
+            playmusic.src = "./img/bf.bmp";
+        } else {
+            // 暂停状态
+            audio.play();
+            playmusic.src = "./img/zt.bmp";
+        }
+    }
+
+    function getsong() {
+
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+                audio.load();
+
+            }
+        })
+
+    }
+    getsong();
+    change.onclick = function () {
+        playmusic.src = "./img/zt.bmp";
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+                audio.load();
+                audio.play();
+            }
+        })
+    }
+    change2.onclick = function () {
+        playmusic.src = "./img/zt.bmp";
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+
+                audio.load();
+                audio.play();
+            }
+        })
+    }
+    loop.onclick = function () {
+
+        if (loop.checked == true) {
+
+            audio.loop = true;
+
+        } else {
+
+            audio.loop = false;
+
+        }
+
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html>	
+<link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
+<link rel="stylesheet" type="text/css" href="./css/player.css">
+
+<head>
+	<meta charset="utf-8">
+	<title>网易云音乐</title>
+	<style type="text/css">
+		body{
+			background-color: rgb(245,245,245);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav {
+			height: 70px;
+			background-color: #242424;
+			display: flex;
+			cursor: pointer;
+		}
+		.rem{
+			cursor: pointer;
+		}
+
+		.nav>div {
+			height: 70px;
+		}
+
+		.text {
+			text-align: center;
+			line-height: 70px;
+			overflow: hidden;
+		}
+
+		.rem {
+			height: 37px;
+			background-color: rgb(194, 12, 12);
+			display: flex;
+		}
+
+		.rem>div {
+			height: 37px;
+		}
+
+		.banner {
+			height: 286px;
+			display: flex;
+			justify-content: center;
+			background-color: black;
+		}
+
+		.banner-left {
+			height: 286px;
+			width: 732px;
+		}
+
+		.banner-right {
+			height: 286px;
+			width: 248px;
+		}
+
+		.banner-left>img {
+			height: 100%;
+			width: 100%;
+		}
+
+		.banner-right>img {
+			height: 100%;
+			width: 100%;
+		}
+
+		.content {
+			height: 1425px;
+			width: 980px;
+			background-color: #fff;
+			margin: 0 auto;
+			border: 1px solid rgb(211, 211, 211);
+			display: flex;
+			justify-content: center;
+		}
+
+		.content-left {
+			width: 731px;
+			height: 1425px;
+			border-right: 1px solid rgb(211, 211, 211);
+		}
+
+		.content-right {
+			width: 247px;
+			height: 920px;
+		}
+
+		.content-title {
+			width: 95%;
+			height: 45px;
+			margin: 0 auto;
+			border-bottom: 2px solid rgb(193, 13, 12);
+			display: flex;
+			/* y轴对齐 */
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.content-main {
+			width: 95%;
+			height: 500px;
+			margin: 0 auto;
+			/* 弹性布局 （盒子模型）使块级标签在同一行*/
+			display: flex;
+			/* x轴 */
+			justify-content: space-between;
+			/* 换行 */
+			flex-wrap: wrap;
+		}
+
+		.content-main>div {
+			width: 145px;
+			height: 185px;
+			margin-top: 20px;
+		}
+
+		.imgcss {
+			width: 100%;
+			height: 85%;
+		}
+
+		.content-mainII {
+			width: 95%;
+			height: 250px;
+			margin: 0 auto;
+			/* 弹性布局 （盒子模型）使块级标签在同一行*/
+			display: flex;
+			/* x轴 */
+			justify-content: space-between;
+			/* 换行 */
+			flex-wrap: wrap;
+		}
+
+		.newdisk {
+			position: relative;
+			top: 10px;
+			border: 2px solid rgb(211, 211, 211);
+			background-color: rgb(211, 211, 211);
+			height: 85%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.newdisk>div {
+			height: 110px;
+			width: 110px;
+		}
+
+		.imgcss1 {
+			height: 100%;
+			width: 100%;
+		}
+
+		.content-mainIII {
+			width: 689px;
+			height: 527px;
+			margin: 0 auto;
+			/* 弹性布局 （盒子模型）使块级标签在同一行*/
+			display: flex;
+			/* x轴 */
+			justify-content: space-between;
+			/* 换行 */
+			flex-wrap: wrap;
+		}
+
+		.榜单 {
+			position: relative;
+			top: 10px;
+			border: 2px solid rgb(211, 211, 211);
+			background-color: rgb(244, 244, 244);
+			height: 472px;
+			width: 689px;
+			display: flex;
+			margin-top: 20px;
+			background: url(https://s2.music.126.net/style/web2/img/index/index_bill.png?13302d5e94d2f8585862892e20d4b219) no-repeat;
+
+		}
+
+		.bang {
+			height: 100%;
+			width: 33.3333333%;
+			border: 1px solid rgb(211, 211, 211);
+			display: flex;
+		}
+		p,h3{
+			cursor: pointer;
+		}
+		dl{
+			display: block;
+		}
+		.top{
+			height: 100px;
+			padding: 20px 0 0 19px;
+			display: flex;
+		}
+		.j-img{
+			height: 80px;
+			width: 80px;
+		}
+		a{
+			
+			cursor: pointer;
+			text-decoration: none;
+			color: #333;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		.btn{
+			margin-top: 10px;
+		}
+		.tit{
+			float: left;
+			width: 116px;
+			margin: 6px 0 0 10px;
+		}
+		.f-fs1{
+			font-size: 14px;
+		}
+		.s-bg{
+			font-size: 12px;
+		}
+		li{
+			list-style: none;
+			height: 32px;
+		}
+		ol{
+			height: 319px;
+			margin-left: 50px;
+			line-height: 32px;
+		}
+		.榜单 .no-top{
+			color: #BA2226;
+		}
+		ol .no{
+			float: left;
+			position: relative;
+			width: 35px;
+			height: 32px;
+			margin-left: -35px;
+			text-align: center;
+			color: #666;
+			font-size: 16px;
+		}
+		.nm {
+		    float: left;
+		    width: 170px;
+		    height: 32px;
+			font-size: 12px;
+		}
+		.top-2{
+			padding-left: 25px;
+		}
+		.top-3{
+			padding-left: 24px;
+		}
+		.v-hd3 {
+		    position: relative;
+		    height: 23px;
+		    margin: 0 20px;
+		    border-bottom: 1px solid #ccc;
+		    color: #333;
+			font-weight: bold;
+		}
+		.f-fl{
+			font-size: 10px;
+		}
+		.s-fc3{
+			font-size: 12px;
+			color: rgb(102,102,102);
+			padding-left: 70px;
+		}
+		.itm {
+			display: flex;
+		    float: left;
+		    width: 210px;
+		    height: 62px;
+		    background: #fafafa;
+			margin: 15px 0 0 20px ;
+		}
+		.head .j-img{
+			float: left;
+			width: 62px;
+			height: 62px;
+		}
+		.ifo h4{
+			padding-left: 10px;
+			margin-top: 8px;
+		}
+		.ifo p{
+			padding-left: 10px;
+			width: 100%;
+		}
+		.n-singer{
+			height: 455px;
+			width: 247px;
+		}
+		.zb{
+			height: 294px;
+			width: 247px;
+		}
+		.f-cb{
+			width: 230px;
+			height: 250px;
+		}
+		.zb-h3{
+			font-size: 12px;
+		}
+		.cver1{
+			width: 40px;
+			height: 42.6px;
+		}
+		.cver1 .i-img{
+			width: 40px;
+			height: 40px;
+		}
+		.f-cb li{
+			display: flex;
+			margin: 20px 0 0 20px;
+			height: 50px;
+			width: 210px;
+		}
+		.zb-xm{
+			padding-top: 5px;
+			font-size: 10px;
+			padding-left: 10px;
+		}
+		.zb-jj{
+			padding-top: 4px;
+			font-size: 10px;
+			padding-left: 10px;
+			color: rgb(102,102,102);
+		}
+		.m-srch .srch{
+			padding-left: 10px;
+			height: 32px;
+			width: 158px;
+			margin-top: 19px;
+			background-color: #fff;
+			border-radius: 32px;
+		}
+		.m-srch{
+			float: right;
+			width: 158px;
+			height: 32px;
+		}
+		.srch-in{
+			margin: 8px 0 0 0;
+			height: 16px;
+			width: 121.6px;
+			outline:medium;
+			border: 1px;
+		}
+		.srch-in:focus{
+			border:0px solid red;
+		}
+		input{
+			line-height: 16px;
+		}
+		.s-img{
+			padding-top: 5px;
+			height: 22px;
+			width: 23px;
+		}
+		.srch-span{
+			display: flex;
+		}
+		.chuang{
+			color: rgb(204,204,204);
+			font-size: 12px;
+			float: right;
+			width: 90px;
+			height: 32px;
+			margin: 19px 0 0 18px;
+			box-sizing: border-box;
+			padding-left: 16px;
+			border: 1px solid #4F4F4F;
+			background-position: 0 -140px;
+			line-height: 33px;
+			color: #ccc;
+			border-radius: 20px;
+		}
+		.login{
+			margin: 27px 0 0 12px;
+			color: rgb(204,204,204);
+			font-size: 13px;
+		}
+		.newdisk{
+			background-color: rgb(245,245,245);
+		}
+		.lb{
+			width: 732px;
+			height: 286px;
+			display: flex;
+			position: relative;
+		}
+		#img{
+			position: absolute;
+			z-index: 1;
+		}
+		.point{
+			width: 100px;
+			height: 30px;
+			background-color: #BA2226;
+			padding-right: 200px;
+
+		}
+		.pl{
+			margin: 260px 0 0 320px;
+			width: 100px;
+			height: 30px;
+			position: absolute;
+			z-index: 2;
+		}
+		.no-top1{
+			color:#666
+		}
+		/* .banner{
+			background-color: rgb(252,84,34);
+		} */
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var input = document.getElementById("srch-input");
+			input.onchange = function(){
+				console.log(input.value)
+				var input_c = input.value
+				var url = "https://music.163.com/#/search/m/?s="+input_c+"&type=1";
+				window.location.href = url;
+			}
+		}
+		function changeColorO(c){
+			c.style.border = '1px solid rgb(255,255,255)'
+			c.style.color = 'rgb(255,255,255)'	
+		}
+		function changeColorB(c){
+			c.style.border = '1px solid #4F4F4F'
+			c.style.color = 'rgb(204,204,204)'
+		}
+	</script>
+</head>
+<body>
+	<div class="nav">
+		<div class="首页" onclick="window.location.href= 'index.html';return false" style="width: 25%;"><img
+				style="height: 70px;width: 100%;" src="img/网易.jpg"></div>
+		<div class="text" onclick="window.location.href= 'index.html';return false" style="color:white;width:10%">发现音乐
+		</div>
+		<div class="text" onclick="window.location.href= '我的音乐.html';return false" style="color:white;width:10%">我的音乐
+		</div>
+		<div class="text" onclick="window.location.href= '朋友.html';return false" style="color:white;width:6%">朋友</div>
+		<div class="text" onclick="window.open('https://music.163.com/store/product')" style="color:white;width:6%">商城
+		</div>
+		<div class="text" onclick="window.open('https://music.163.com/st/musician')" style="color:white;width:9%">音乐人
+		</div>
+		<div class="text" onclick="window.open('下载.html')" style="color:white;width:7%">下载客户端</div>
+		<div class="m-srch">
+			<div class="srch" >
+				<span class="srch-span">
+					<img class="s-img" src="img/搜索.png"  />
+					<input type="text"  class="srch-in" id="srch-input"  placeholder="音乐/视频/电台/用户" />
+				</span>
+			</div>
+		</div>
+		<a onmousemove="changeColorO(this)" onmouseleave="changeColorB(this)" class="chuang" href="https://music.163.com/login?targetUrl=%2Fcreatorcenter">创作者中心</a>
+		<a class="login" href="https://music.163.com/#/login">登录</a>
+	</div>
+	<div class="rem">
+		<div onclick="window.location.href= 'index.html';return false"
+			style="font-size: 10px;width: 30%;line-height:37px;overflow:hidden;text-align: right;color: white;">推荐
+		</div>
+		<div onclick="window.open('排行榜.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">排行榜
+		</div>
+		<div onclick="window.open('歌单.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌单
+		</div>
+		<div onclick="window.open('主播电台.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">主播电台
+		</div>
+		<div onclick="window.open('歌手.html','_self')"
+			style="font-size: 10px;width: 6%;line-height:37px;overflow:hidden;text-align: center;color: white;">歌手
+		</div>
+		<div onclick="window.open('新碟上架.html','_self')"
+			style="font-size: 10px;width: 37%;line-height:37px;overflow:hidden;text-align: left;color: white;">新歌上架
+		</div>
+	</div>
+	<div class="banner" id="banner">
+		<div class="banner-left">
+			<div class="lb">
+				<a id="lb_a" href=""><img id="img" src="http://p1.music.126.net/VpO0xAQWTloZs7iHwB9imA==/109951165558294198.jpg?imageView&quality=89" width="732px" height="286px"/></a>
+				<div class="point" style="display: block;">
+					<ul class="pl" style="display: flex;">
+						<li>
+							<!-- 小圆点地址：https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe -->
+							<img id="pi1" src="https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe" />
+						</li>
+						<li>
+							<!-- 小圆点地址：https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe -->
+							<img id="pi2" src="https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe" />
+						</li>
+						<li>
+							<!-- 小圆点地址：https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe -->
+							<img id="pi3" src="https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe" />
+						</li>
+						<li>
+							<!-- 小圆点地址：https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe -->
+							<img id="pi4" src="https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe" />
+						</li>
+						<li>
+							<!-- 小圆点地址：https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe -->
+							<img id="pi5" src="https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe" />
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="banner-right" onclick="window.location.href= '下载.html';return false">
+			<img src="img/download.jpg" />
+		</div>
+	</div>
+	<div class="content">
+		<div class="content-left">
+			<div class="content-title">
+				<div style="width: 20%;">
+					<h3 onclick="window.location.href='https://music.163.com/#/discover/playlist/'"><img src="img/点.jpg">热门推荐</h3>
+				</div>
+				<div style="width: 72%;font-size: small;"> <a href="https://music.163.com/#/discover/playlist/?cat=%E5%8D%8E%E8%AF%AD">华语</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://music.163.com/#/discover/playlist/?cat=%E6%B5%81%E8%A1%8C">流行</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="https://music.163.com/#/discover/playlist/?cat=%E6%91%87%E6%BB%9A">摇滚</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="https://music.163.com/#/discover/playlist/?cat=民谣">民谣</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="https://music.163.com/#/discover/playlist/?cat=电子">电子</a></div>
+				<div style="width: 8%;font-size: small;" onclick="window.location.href= '歌单.html';return false">
+					<p><a href="https://music.163.com/#/discover/playlist/">更多<img src="img/箭头.jpg"></a></p>
+				</div>
+			</div>
+			<div class="content-main">
+				<div>
+					<img onclick="window.location.href= 'https://music.163.com/#/playlist?id=5369003003';return false" class="imgcss"
+						src="http://p3.music.126.net/Hr8sEJzhAKvKo8x56n-Yhw==/109951165525778915.jpg?param=200y200" />
+					<p style="font-size: 14px;"> <a>一秒沉醉 • 欧美迷情仙女嗓</a></p>
+				</div>
+				<div>
+					<img onclick="window.location.href= 'https://music.163.com/#/playlist?id=2753021827';return false" class="imgcss"
+						src="http://p4.music.126.net/DJGKQZqtAx2Y4OKaItvnZg==/109951164620137291.jpg?param=200y200" />
+					<p style="font-size: 14px;"><a>忘不掉的伤（最火劲爆DJ）【持续更新】</a></p>
+				</div>
+				<div>
+					<img onclick="window.location.href= 'https://music.163.com/#/playlist?id=5362468180';return false" class="imgcss"
+						src="http://p3.music.126.net/suViIWnf5k8M7vDJcdO8vw==/109951165515810428.jpg?param=200y200" />
+					<p style="font-size: 14px;"><a>考研倒计时:剩余每一天都值得你100%的努力</a></p>
+				</div>
+				<div>
+					<img onclick="window.location.href= 'https://music.163.com/#/dj?id=2071011418';return false" class="imgcss"
+						src="http://p1.music.126.net/JxMHYk-dIm8ESYu4IW8qGw==/109951165538472527.jpg?param=140y140" />
+					<p style="font-size: 14px;"><img style="height:20px;width:40px;" src="img/电台节目.jpg"><a>一秒片段一生羁绊——《给电影人的情书》</a></p>
+				</div>
+				<div>
+					<img onclick="window.location.href= 'https://music.163.com/#/playlist?id=2829821753';return false" class="imgcss"
+						src="http://p4.music.126.net/o5Dehszc99cYe1HOxnHoTg==/109951165545418477.jpg?param=200y200" />
+					<p style="font-size: 14px;"><a>[聚精会神] 学习工作必备的背景音乐</a></p>
+				</div>
+				<div>
+					<img onclick="window.location.href= 'https://music.163.com/#/dj?id=2070999455';return false" class="imgcss"
+						src="http://p1.music.126.net/HH9fAhR7X8Ovi5PZJ-7a0w==/109951165537513341.jpg?param=140y140" />
+					<p style="font-size: 14px;"><img style="height:20px;width:40px;" src="img/电台节目.jpg"><a>BY2FM72.5一样爱着你
+						第二期 “我们只是一个普通追梦的女孩”</a></p>
+				</div>
+				<div>
+					<img onclick="window.location.href= 'https://music.163.com/#/playlist?id=5307233286';return false" class="imgcss"
+						src="http://p3.music.126.net/ytANVTQzMLhNMu4PVVqUVA==/109951165418678782.jpg?param=200y200" />
+					<p style="font-size: 14px;"><a>Abdulla Abdurehim阿不都拉</a></p>
+				</div>
+				<div>
+					<img onclick="window.location.href= 'https://music.163.com/#/dj?id=2071007425';return false" class="imgcss"
+						src="http://p1.music.126.net/sX0fCerYBtl_eC3aU7N0Tg==/109951165536928945.jpg?param=140y140" />
+					<p style="font-size: 14px;"><img style="height:20px;width:40px;" src="img/电台节目.jpg"><a>茫</a></p>
+				</div>
+			</div>
+
+			<div class="content-title">
+				<div>
+					<h3 onclick="window.location.href='https://music.163.com/#/discover/album/'"><img src="img/点.jpg">新碟上架</h3>
+				</div>
+				<div style="font-size: small;" onclick="window.location.href= '新碟上架.html';return false">
+					<p><a href="https://music.163.com/#/discover/album/">更多<img src="img/箭头.jpg"></a></p>
+				</div>
+			</div>
+			<div class="content-mainII">
+				<div class="newdisk">
+					<div><a href="https://music.163.com/#/album?id=98517879"><img class="imgcss1"
+								src="http://p1.music.126.net/sKJAa_JqQsgv8hm4s1brzg==/109951165482631929.jpg?param=177y177"
+								title="Monster"></a>
+						<p style="font-size: small;">Monster</p>
+					</div>
+					<div><a href="https://music.163.com/#/album?id=73876792"><img class="imgcss1"
+								src="http://p2.music.126.net/cYokJRjJvsOvGkGHliJlGQ==/109951164614170425.jpg?param=177y177"
+								title="未·LIVE"></a>
+						<p style="font-size: small;">未·LIVE</p>
+					</div>
+					<div><a href="https://music.163.com/#/album?id=98368946"><img class="imgcss1"
+								src="http://p2.music.126.net/ynlEvENFDF9W5SpFTzU1mw==/109951165473772228.jpg?param=177y177"
+								title="RE-CODE"></a>
+						<p style="font-size: small;">RE-CODE</p>
+					</div>
+					<div><a href="https://music.163.com/#/album?id=97772220"><img class="imgcss1"
+								src="http://p2.music.126.net/ilhSwYuf1t3_vVu5eU5Pnw==/109951165434590354.jpg?param=177y177"
+								title="不完美人生指南"></a>
+						<p style="font-size: small;">不完美人生指南</p>
+					</div>
+					<div><a href="https://music.163.com/#/album?id=97118598"><img class="imgcss1"
+								src="http://p2.music.126.net/aXvj5BYRCoCWgdD40_CgXg==/109951165425092026.jpg?param=177y177"
+								title="如果当时2020"></a>
+						<p style="font-size: small;">如果当时2020</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="content-title">
+				<div>
+					<h3 onclick="window.location.href='https://music.163.com/#/discover/toplist'"><img src="img/点.jpg">榜单</h3>
+				</div>
+				<div style="font-size: small;" onclick="window.location.href= '排行榜.html';return false">
+					<p><a href="https://music.163.com/#/discover/toplist">更多<img src="img/箭头.jpg"></a></p>
+				</div>
+			</div>
+			<div class="content-mainIII">
+				<div class="榜单">
+					<!-- <img style="width: 100%;height: 100%;" src="img/榜单.jpg"> -->
+					<dl class="dl-left">
+						<dt class="top">
+							<div class="cver u-cover u-cover-4">
+								<a href="  " class="msk" title="云音乐飙升榜"><img class="j-img"
+										data-src="http://p3.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100"
+										src="http://p3.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100"></a>
+							</div>
+							<div class="tit">
+								<a href="  " title="云音乐飙升榜">
+									<h3 class="f-fs1 f-thide">云音乐飙升榜</h3>
+								</a>
+								<div class="btn">
+									<a class="s-bg s-bg-9 f-tdn">播放</a>
+									<a class="s-bg s-bg-10 f-tdn subscribe-flag " title="收藏">收藏</a>
+								</div>
+							</div>
+						</dt>
+						<dd>
+							<ol>
+								<li>
+									<span class="no no-top">1</span>
+									<a href="https://music.163.com/#/song?id=1806127860" class="nm"
+										title="Afterglow">Afterglow</a>
+								</li>
+								<li>
+									<span class="no no-top">2</span>
+									<a href="https://music.163.com/#/song?id=1805313484" class="nm"
+										title="未来，请你来！">未来，请你来！</a>
+								</li>
+								<li>
+									<span class="no no-top">3</span>
+									<a href="https://music.163.com/#/song?id=1805842261" class="nm"
+										title="欢迎光临">欢迎光临</a>
+								</li>
+								<li>
+									<span class="no no-top1">4</span>
+									<a href="https://music.163.com/#/song?id=1805378330" class="nm"
+										title="Flags">Flags</a>
+								</li>
+								<li>
+									<span class="no no-top1">5</span>
+									<a href="https://music.163.com/#/song?id=1805371171" class="nm" title="风儿吹">风儿吹</a>
+								</li>
+								<li>
+									<span class="no no-top1">6</span>
+									<a href="https://music.163.com/#/song?id=1805377890" class="nm"
+										title="无法坠入爱河">无法坠入爱河</a>
+								</li>
+								<li>
+									<span class="no no-top1">7</span>
+									<a href="https://music.163.com/#/song?id=1490611167" class="nm"
+										title="无法坠入爱河 (Punk Version)">无法坠入爱河 (Punk Version)</a>
+								</li>
+								<li>
+									<span class="no no-top1">8</span>
+									<a href="https://music.163.com/#/song?id=1805088448" class="nm" title="大雾 (demo)">大雾
+										(demo)</a>
+								</li>
+								<li>
+									<span class="no no-top1">9</span>
+									<a href="https://music.163.com/#/song?id=1492319432" class="nm"
+										title="在哪里都很好">在哪里都很好</a>
+								</li>
+								<li>
+									<span class="no no-top1">10</span>
+									<a href="https://music.163.com/#/song?id=1485850351" class="nm" title="声声慢 (京韵版)">声声慢 (京韵版)</a>
+								</li>
+								<li style="font-size: 10px;text-align: right;">
+									<a href="https://music.163.com/#/discover/toplist?id=19723756">查看全部&gt;</a></li>
+							</ol>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="top top-2">
+							<div class="cver u-cover u-cover-4">
+								<a href="https://music.163.com/discover/toplist?id=3779629" class="msk"
+									title="云音乐新歌榜"><img class="j-img"
+										data-src="http://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100"
+										src="http://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100"></a>
+							</div>
+							<div class="tit">
+								<a href="https://music.163.com/discover/toplist?id=3779629" title="云音乐新歌榜">
+									<h3 class="f-fs1 f-thide">云音乐新歌榜</h3>
+								</a>
+								<div class="btn">
+									<a class="s-bg s-bg-9 f-tdn">播放</a>
+									<a class="s-bg s-bg-10 f-tdn subscribe-flag " title="收藏">收藏</a>
+								</div>
+							</div>
+						</dt>
+						<dd>
+							<ol>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top">1</span>
+									<a href="https://music.163.com/song?id=1804879213" class="nm s-fc0 f-thide"
+										title="过">过</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top">2</span>
+									<a href="https://music.163.com/#/song?id=1804320463" class="nm s-fc0 f-thide"
+										title="踏山河">踏山河</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top">3</span>
+									<a href="https://music.163.com/#/song?id=1500569811" class="nm s-fc0 f-thide"
+										title="阿拉斯加海湾">阿拉斯加海湾</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">4</span>
+									<a href="https://music.163.com/#/song?id=1498342485" class="nm s-fc0 f-thide"
+										title="耗尽">耗尽</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">5</span>
+									<a href="https://music.163.com/#/song?id=1806127860" class="nm s-fc0 f-thide"
+										title="Afterglow">Afterglow</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">6</span>
+									<a href="https://music.163.com/#/song?id=1497799734" class="nm s-fc0 f-thide"
+										title="三号线（吉他版）">三号线（吉他版）</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">7</span>
+									<a href="https://music.163.com/#/song?id=1805313484" class="nm s-fc0 f-thide"
+										title="未来，请你来！">未来，请你来！</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">8</span>
+									<a href="https://music.163.com/#/song?id=1500788926" class="nm s-fc0 f-thide"
+										title="努力工作吧">努力工作吧</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">9</span>
+									<a href="https://music.163.com/#/song?id=1804586180" class="nm s-fc0 f-thide"
+										title="像一道光">像一道光</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">10</span>
+									<a href="https://music.163.com/#/song?id=1803349526" class="nm s-fc0 f-thide"
+										title="野心">野心</a>
+								</li>
+								<li style="font-size: 10px;text-align: right;">
+									<a href="https://music.163.com/#/discover/toplist?id=3779629">查看全部&gt;</a></li>
+							</ol>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="top top-3">
+							<div class="cver u-cover u-cover-4">
+								<a href="https://music.163.com/discover/toplist?id=2884035" class="msk"
+									title="网易原创歌曲榜"><img class="j-img"
+										data-src="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100"
+										src="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100"></a>
+							</div>
+							<div class="tit">
+								<a href="https://music.163.com/discover/toplist?id=2884035" title="网易原创歌曲榜">
+									<h3 class="f-fs1 f-thide">网易原创歌曲榜</h3>
+								</a>
+								<div class="btn">
+									<a class="s-bg s-bg-9 f-tdn" title="播放">播放</a>
+									<a class="s-bg s-bg-10 f-tdn subscribe-flag " title="收藏">收藏</a>
+								</div>
+							</div>
+						</dt>
+						<dd>
+							<ol>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top">1</span>
+									<a href="https://music.163.com/song?id=1501510275" class="nm s-fc0 f-thide" 
+									title="Young Lovers in Da Hood">Young Lovers in Da Hood</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top">2</span>
+									<a href="https://music.163.com/#/song?id=1803577558" class="nm s-fc0 f-thide" 
+									title="侠心">侠心</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top">3</span>
+									<a href="https://music.163.com/#/song?id=1500163985" class="nm s-fc0 f-thide" 
+									title="我还在，你呢">我还在，你呢</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">4</span>
+									<a href="https://music.163.com/#/song?id=1500788926" class="nm s-fc0 f-thide" 
+									title="努力工作吧">努力工作吧</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">5</span>
+									<a href="https://music.163.com/#/song?id=1803629106" class="nm s-fc0 f-thide" 
+									title="是初恋是心动是你">是初恋是心动是你</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">6</span>
+									<a href="https://music.163.com/#/song?id=1803937410" class="nm s-fc0 f-thide" 
+									title="汪洋中的一条船（feat.曹羊）">汪洋中的一条船（feat.曹羊）</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">7</span>
+									<a href="https://music.163.com/#/song?id=1803936748" class="nm s-fc0 f-thide" 
+									title="耳 喃">耳 喃</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">8</span>
+									<a href="https://music.163.com/#/song?id=1501467471" class="nm s-fc0 f-thide" 
+									title="出海">出海</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">9</span>
+									<a href="https://music.163.com/#/song?id=1501781718" class="nm s-fc0 f-thide" 
+									title="起点">起点</a>
+								</li>
+								<li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
+									<span class="no no-top1">10</span>
+									<a href="https://music.163.com/#/song?id=1804542135" class="nm s-fc0 f-thide" 
+									title="nightswim">nightswim</a>
+								</li>
+								<li style="font-size: 10px;text-align: right;">
+									<a href="https://music.163.com/#/discover/toplist?id=2884035">查看全部&gt;</a></li>
+							</ol>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="content-right">
+			<div><img style="width: 100%;" src="img/登录.jpg"></div>
+			<div class="n-singer">
+				<h3 class="v-hd3">
+					<span class="f-fl">入驻歌手</span>
+					<a href="https://music.163.com/discover/artist/signed/" class="more s-fc3">查看全部 &gt;</a>
+				</h3>
+				<ul class="n-enter">
+					<li>
+						<a href="https://music.163.com/user/home?id=29879272" class="itm f-tdn">
+							<div class="head">
+								<img class="j-img"
+									src="http://p1.music.126.net/p9U80ex1B1ciPFa125xV5A==/5931865232210340.jpg?param=62y62">
+							</div>
+							<div class="ifo">
+								<h4><span class="nm f-fs1 f-ib f-thide">张惠妹aMEI</span></h4>
+								<p class="f-thide s-fc3">台湾歌手张惠妹</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://music.163.com/#/user/home?id=100167517" class="itm f-tdn">
+							<div class="head"><img class="j-img"
+									src="http://p1.music.126.net/1EN_iqQWU_E3DafzEOh3cA==/3302932937408956.jpg?param=62y62">
+							</div>
+							<div class="ifo">
+								<h4><span class="nm f-fs1 f-ib f-thide">Fine乐团</span></h4>
+								<p class="f-thide s-fc3">独立音乐人</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://music.163.com/#/user/home?id=58426904" class="itm f-tdn">
+							<div class="head"><img class="j-img"
+									src="http://p1.music.126.net/ZuktZvjcxpYBjcWC3gmbPg==/19027048718765608.jpg?param=180y180">
+							</div>
+							<div class="ifo">
+								<h4><span class="nm f-fs1 f-ib f-thide">萬曉利</span></h4>
+								<p class="f-thide s-fc3">民谣歌手、中国现...</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://music.163.com/#/user/home?id=93504818" class="itm f-tdn">
+							<div class="head"><img class="j-img"
+									src="http://p1.music.126.net/v_zYgE9kmAwVGWV2c8hFxA==/7943971513291094.jpg?param=180y180">
+							</div>
+							<div class="ifo">
+								<h4><span class="nm f-fs1 f-ib f-thide">音乐人赵雷</span></h4>
+								<p class="f-thide s-fc3">民谣歌手</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://music.163.com/#/user/home?id=46998208" class="itm f-tdn">
+							<div class="head"><img class="j-img"
+									src="http://p1.music.126.net/1EN_iqQWU_E3DafzEOh3cA==/3302932937408956.jpg?param=62y62">
+							</div>
+							<div class="ifo">
+								<h4><span class="nm f-fs1 f-ib f-thide">王三溥</span></h4>
+								<p class="f-thide s-fc3">音乐人</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="zb">
+				<h3 class="v-hd3 zb-h3">热门主播</h3>
+				<ul class="f-cb">
+					<li>
+						<a href="https://music.163.com/user/home?id=278438485" class="cver1"><img class="i-img"
+								src="http://p2.music.126.net/H3QxWdf0eUiwmhJvA4vrMQ==/1407374893913311.jpg?param=40y40"
+								data-src="http://p2.music.126.net/H3QxWdf0eUiwmhJvA4vrMQ==/1407374893913311.jpg?param=40y40"></a>
+						<div class="info">
+							<p class="zb-xm"><a href="https://music.163.com/user/home?id=278438485"
+									class="nm-icn f-thide s-fc0">陈立</a> </p>
+							<p class="zb-jj">心理学家、美食家陈立教授</p>
+						</div>
+					</li>
+					<li>
+						<a href="https://music.163.com/#/user/home?id=91239965" class="cver1"><img class="i-img"
+								src="http://p1.music.126.net/y5-sM7tjnxnu_V9LWKgZlw==/7942872001461517.jpg?param=180y180"
+								data-src="http://p1.music.126.net/y5-sM7tjnxnu_V9LWKgZlw==/7942872001461517.jpg?param=180y180"></a>
+						<div class="info">
+							<p class="zb-xm"><a href="https://music.163.com/#/user/home?id=91239965"
+									class="nm-icn f-thide s-fc0">DJ艳秋</a> </p>
+							<p class="zb-jj">著名音乐节目主持人</p>
+						</div>
+					</li>
+					<li>
+						<a href="https://music.163.com/#/user/home?id=324314596" class="cver1"><img class="i-img"
+								src="http://p1.music.126.net/6cc6lgOfQTo6ovNnTHPyJg==/3427177769086282.jpg?param=180y180"
+								data-src="http://p1.music.126.net/6cc6lgOfQTo6ovNnTHPyJg==/3427177769086282.jpg?param=180y180"></a>
+						<div class="info">
+							<p class="zb-xm"><a href="https://music.163.com/#/user/home?id=324314596"
+									class="nm-icn f-thide s-fc0">国家大剧院古典音乐频道</a> </p>
+							<p class="zb-jj">国家大剧院古典音乐官方</p>
+						</div>
+					</li>
+					<li>
+						<a href="https://music.163.com/#/user/home?id=1611157" class="cver1"><img class="i-img"
+								src="http://p1.music.126.net/xa1Uxrrn4J0pm_PJwkGYvw==/3130309604335651.jpg?param=180y180"
+								data-src="http://p1.music.126.net/xa1Uxrrn4J0pm_PJwkGYvw==/3130309604335651.jpg?param=180y180"></a>
+						<div class="info">
+							<p class="zb-xm"><a href="https://music.163.com/#/user/home?id=1611157"
+									class="nm-icn f-thide s-fc0">谢谢收听</a> </p>
+							<p class="zb-jj">南京电台主持人王馨</p>
+						</div>
+					</li>
+					<li>
+						<a href="https://music.163.com/#/user/home?id=2313954" class="cver1"><img class="i-img"
+								src="http://p1.music.126.net/slpd09Tf5Ju82Mv-h8MP4w==/3440371884651965.jpg?param=180y180"
+								data-src="http://p1.music.126.net/slpd09Tf5Ju82Mv-h8MP4w==/3440371884651965.jpg?param=180y180"></a>
+						<div class="info">
+							<p class="zb-xm"><a href="https://music.163.com/#/user/home?id=2313954"
+									class="nm-icn f-thide s-fc0">DJ晓苏</a> </p>
+							<p class="zb-jj">独立DJ，CRI环球旅游广播...</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div>
+		<img style="width: 100%;" src="img/最下.jpg">
+	</div>
+	<div class="footer">
+        <div class="inner">
+            <img src="./img/syg.bmp" alt="" id="change" style="height: 32px;">
+            <img src="./img/bf.bmp" alt="" style="margin-left: 20px; height: 40px; width: 35px;" id="playmusic">
+            <img src="./img/xyg.bmp" alt="" id="change2" style="margin-left: 20px;height: 32px;">
+            <img src="" alt="" id="pic" style="height: 40px; width: 40px; border-radius: 10%; margin-left: 30px;">
+            <div class="play">
+                <div class="word">
+					<br>
+                    <p id="word1">歌曲名</p>
+                </div>
+                <div>
+                    <audio src="" controls="controls" class="player" id="audio"></audio>
+                </div>
+            </div>
+            <label style="color:white; margin-left: 50px;">
+                <h3><input type="checkbox" class="loop" id="loop" οnclick="loop(this)">循环播放</h3>
+            </label>
+
+        </div>
+
+    </div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    var audio = document.getElementById("audio");
+    var pic = document.getElementById("pic");
+    var word = document.getElementById("word1");
+    var change = document.getElementById("change");
+    var change2 = document.getElementById("change2");
+    var playmusic = document.getElementById("playmusic");
+    var loop = document.getElementById("loop");
+    playmusic.onclick = function () {
+        var tmp = playmusic.src;
+        if (tmp.indexOf("zt.bmp") >= 0) {
+            // 正在播放
+            audio.pause();
+            playmusic.src = "./img/bf.bmp";
+        } else {
+            // 暂停状态
+            audio.play();
+            playmusic.src = "./img/zt.bmp";
+        }
+    }
+
+    function getsong() {
+
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+                audio.load();
+
+            }
+        })
+
+    }
+    getsong();
+    change.onclick = function () {
+        playmusic.src = "./img/zt.bmp";
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+                audio.load();
+                audio.play();
+            }
+        })
+    }
+    change2.onclick = function () {
+        playmusic.src = "./img/zt.bmp";
+        $.ajax({
+            url: "https://api.uomg.com/api/rand.music?sort=%E7%83%AD%E6%AD%8C%E6%A6%9C&format=json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                pic.src = data.data.picurl;
+                audio.src = data.data.url;
+                word.innerText = data.data.name + " - " + data.data.artistsname;
+
+                audio.load();
+                audio.play();
+            }
+        })
+    }
+    loop.onclick = function () {
+
+        if (loop.checked == true) {
+
+            audio.loop = true;
+
+        } else {
+
+            audio.loop = false;
+
+        }
+
+    }
+
+</script>
+
+</html>
+<script>
+	var m = 0,int = 1;
+	var ah = new Array();
+	ah[0] = "https://music.163.com/m/at/5fdc7ab7111e327b8ae9a70b";
+	ah[1] = "https://music.163.com/song?id=1804879213";
+	ah[2] = "https://music.163.com/song?id=1806055913";
+	ah[3] = "https://music.163.com/song?id=1806096611";
+	ah[4] = "https://music.163.com/song?id=1805313484";
+	var bc = new Array();
+	bc[0]="rgb(252,84,34)";
+	bc[1]="rgb(50,50,50)";
+	bc[2]="rgb(0,0,0)";
+	bc[3]="rgb(161,83,82)";
+	bc[4]="rgb(95,147,188)";
+	var pi = new Array();
+	pi[0]="pi1";
+	pi[1]="pi2";
+	pi[2]="pi3";
+	pi[3]="pi4";
+	pi[4]="pi5";
+	var imgLi = new Array();
+	imgLi[0]="http://p1.music.126.net/KYnuPBp2T-dVne4VLHqONA==/109951165558309983.jpg?imageView&quality=89"
+	imgLi[1]="http://p1.music.126.net/VpO0xAQWTloZs7iHwB9imA==/109951165558294198.jpg?imageView&quality=89";
+	imgLi[2]="http://p1.music.126.net/wL7fZSlnmewEc6CHEXblmQ==/109951165558211393.jpg?imageView&quality=89";
+	imgLi[3]="http://p1.music.126.net/s5V09UFn3OiZucn9K5kEpQ==/109951165558198370.jpg?imageView&quality=89";
+	imgLi[4]="http://p1.music.126.net/h_Rh3S5OzM4la0gDI3ldQQ==/109951165558302150.jpg?imageView&quality=89";
+	function loop(m){
+		console.log(m);
+		document.getElementById("img").src = imgLi[m];
+		document.getElementById(pi[m]).src = "./img/红色小圆点.png";
+		document.getElementById("banner").style.background = bc[m];
+		document.getElementById("lb_a").href = ah[m];
+		if(m!=0){
+			document.getElementById(pi[m-1]).src = "https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe";
+		}
+		else if(m==0){
+			document.getElementById("pi5").src = "https://s2.music.126.net/style/web2/img/ie6/dot.png?2b9b827baea16eec394d742f08589fbe";
+		}
+	}
+	if(int){
+		var int = self.setInterval("if(int){if(m==5){m=0};loop(m);m++}",4000);
+	}
+</script>
